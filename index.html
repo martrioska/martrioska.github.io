@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="Webpage description goes here" />
+  <meta charset="utf-8">
+  <title>Martrioska</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="myhomepage.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="homepage.js"></script>
+  
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon_package_v0.16/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+	<link rel="manifest" href="favicon_package_v0.16/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+<div class='vidContain'>
+        <video autoplay muted loop id="VideoElement"><source src="background.mp4" type="video/mp4"></video>
+    <div class="topbar">
+    	<div class="left-bar">
+		<a class="title">martrioska</a>
+		</div>
+		<div class="right-bar">
+			<a  id="firstanchor" onclick="changePageOne()">about us</a>
+			<a  id="secondanchor" onclick="changePageTwo()">the project</a>
+			<a  id="thirdanchor" onclick="changePageThree()">credits</a>
+		</div>
+	</div>
+	<div class="bottombar">
+		<p><a id="main-anchor" onclick="transitionToPage('martrioska.html')" >Learn more about gender inequality in the art history field</a></p>
+	</div>
+</div>
+<div class="aboutus" id="aboutus">
+	<div class="pagetitle">
+		<div class="pagename">about us</div>
+		<div class="pageexit"><a class="exitanchor" onclick="changePageBack()">X</a></div>
+	</div>
+	<div class="about-content">
+		<div class="person">
+			<p class="person-name">Nooshin</p>
+			<p class="person-surname">Shahidzadeh</p>
+			<p class="person-description">Master's Degree Student of DHDK at the University of Bologna. Graduated in <span class="highlighted-two">Software Engineering.</span></p>
+			<p class="person-role">Web development</p>
+			<p class="person-mail"><a href="mailto:tua@email.com">Contact</a></p>
+		</div>
+		<div class="person">
+			<p class="person-name">Giulia</p>
+			<p class="person-surname">Manganelli</p>
+			<p class="person-description">Master's Degree Student of DHDK at the University of Bologna. Graduated in <span class="highlighted">Humanities.</span></p>
+			<p class="person-role"></p>
+			<p class="person-role">Web development</p>
+			<p class="person-mail"><a href="mailto:tua@email.com">Contact</a></p>
+		</div>
+		<div class="person">
+			<p class="person-name">Marco</p>
+			<p class="person-surname">Grasso</p>
+			<p class="person-description">Master's Degree Student of DHDK at the University of Bologna. Graduated in <span class="highlighted">Humanities.</span></p>
+			<p class="person-role">Web development</p>
+			<p class="person-mail"><a href="mailto:tua@email.com">Contact</a></p>
+			
+		</div>
+
+
+	</div>
+</div>
+<div class="theproject" id="theproject">
+	<div class="pagetitle">
+		<div class="pagename">The project</div>
+		<div class="pageexit"><a class="exitanchor" onclick="changePageBack()">X</a></div>
+	</div>
+	<div class="theproject-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id libero nibh. Ut facilisis quam at nunc pulvinar, sit amet mollis erat maximus. Suspendisse quis purus a justo eleifend volutpat. <span class="highlighted">Pellentesque vestibulum</span> posuere nunc, id maximus leo sagittis eget. Curabitur bibendum, ligula vitae vulputate eleifend, nunc ante maximus purus, vitae volutpat sem tellus vel ex. Maecenas vestibulum nisi ac tellus mattis varius vel et sapien. Vestibulum ac leo eu magna mattis suscipit vel eget elit. Aliquam non faucibus eros, sit amet faucibus odio. Vivamus elementum tortor vitae neque malesuada faucibus pharetra et risus. Nullam interdum turpis non neque finibus, bibendum gravida arcu imperdiet. Aliquam ultricies mollis tellus, eu lobortis purus fringilla eu. Quisque finibus mauris quis velit rutrum tristique. Integer commodo, nunc sed malesuada fermentum, ipsum erat <span class="highlighted">imperdiet</span> quam, ac commodo mauris magna id neque. Aliquam bibendum ipsum ac ipsum egestas posuere.</p>
+		</div>
+</div>
+<div class="credits" id="credits">
+		<div class="pagetitle">
+		<div class="pagename">credits</div>
+		<div class="pageexit"><a class="exitanchor" onclick="changePageBack()">X</a></div>
+	</div>
+	<div class="credits-content">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id libero nibh. Ut facilisis quam at nunc pulvinar, sit amet mollis erat maximus. Suspendisse quis purus a justo eleifend volutpat. <span class="highlighted-two">Pellentesque vestibulum</span> posuere nunc, id maximus leo sagittis eget. Curabitur bibendum, ligula vitae vulputate eleifend, nunc ante maximus purus, vitae volutpat sem tellus vel ex. Maecenas vestibulum nisi ac tellus mattis varius vel et sapien. Vestibulum ac leo eu magna mattis suscipit vel eget elit. Integer commodo, nunc sed malesuada fermentum, ipsum erat <span class="highlighted-two">imperdiet</span> quam, ac commodo mauris magna id neque. Aliquam bibendum ipsum ac ipsum egestas posuere.</p>
+	</div>
+	
+</div>
+
+<script>
+
+</script>
+</body>
+</html>
