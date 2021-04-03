@@ -575,6 +575,8 @@ line-height: 1.6;
 	.theproject-content {
   	display:block;
   	top:10%;
+        height:50%;
+  	overflow-y:scroll;
   	text-align: justify;
   	text-justify: inter-word;
 	}
