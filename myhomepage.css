@@ -588,7 +588,9 @@ line-height: 1.6;
 	
 	.credits-content {
   	display:block;
-  	 width:80%;
+  	width:80%;
+	height:50%;
+  	overflow-y:scroll;
   	top:10%;
   	text-align: justify;
   	text-justify: inter-word;
