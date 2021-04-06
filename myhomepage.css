@@ -312,7 +312,32 @@ font-size: 1.3rem;
 line-height: 1.6;
 margin-top:10px;
 margin-bottom:15px;
+}
 
+.theproject-content p a{
+color:black;
+text-decoration: none;
+}
+
+/* unvisited link */
+.theproject-content p a:link {
+  color: black;
+}
+
+/* visited link */
+.theproject-content p a:visited {
+  color: black;
+}
+
+/* mouse over link */
+.theproject-content p a:hover {
+  color: black;
+  opacity: .4;
+}
+
+/* selected link */
+.theproject-content p a:active {
+  color: black;
 }
 
 /* -------------------- CREDITS PAGE ---------------------- */
