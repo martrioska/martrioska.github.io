@@ -347,6 +347,21 @@ text-align: center;
 
 }
 
+/* ----------------------------- CHARTS  ----------------------------- */
+#switch-btn {
+background-color: white;
+padding: 14px 40px;
+border-radius: 12px;
+color: black;
+border: 2px solid grey;
+transition-duration: 0.4s;
+}
+
+#switch-btn:hover {
+  background-color: grey;
+  color: white;
+}
+
 
 /* ----------------------------- RESPONSIVE DESIGN  ----------------------------- */
 
