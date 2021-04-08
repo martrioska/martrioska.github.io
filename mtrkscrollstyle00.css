@@ -350,15 +350,15 @@ text-align: center;
 /* ----------------------------- CHARTS  ----------------------------- */
 #switch-btn {
 background-color: white;
-padding: 14px 40px;
-border-radius: 12px;
+padding: 10px 10px;
+border-radius: 40px;
 color: black;
-border: 2px solid grey;
+border: 2px solid #E0E0E0;
 transition-duration: 0.4s;
 }
 
 #switch-btn:hover {
-  background-color: grey;
+  background-color: #E0E0E0;
   color: white;
 }
 
