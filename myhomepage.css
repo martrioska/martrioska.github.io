@@ -359,6 +359,32 @@ line-height: 1.6;
 
 }
 
+.credits-content p a{
+color:black;
+text-decoration: none;
+}
+
+/* unvisited link */
+.credits-content p a:link {
+  color: black;
+}
+
+/* visited link */
+.credits-content p a:visited {
+  color: black;
+}
+
+/* mouse over link */
+.credits-content p a:hover {
+  color: black;
+  opacity: .4;
+}
+
+/* selected link */
+.credits-content p a:active {
+  color: black;
+}
+
 /* -------------------- RESPONSIVNESS ---------------------- */
 @media screen and (max-width: 1200px) {
 
