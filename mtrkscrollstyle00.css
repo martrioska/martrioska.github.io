@@ -371,8 +371,12 @@ text-align: center;
 }
 
 #switch-btn:hover {
-  background-color: #E0E0E0;
-  color: white;
+  background-color: #E8ccda;
+  color: black;
+}
+
+#switch-btn:focus {
+	outline:0;
 }
 
 
