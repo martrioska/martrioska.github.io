@@ -197,17 +197,40 @@ polygonSeries.data = map_data
 var polygonTemplate = polygonSeries.mapPolygons.template;
 polygonTemplate.strokeOpacity = 1;
 polygonTemplate.stroke = am4core.color("#ffffff");
-polygonTemplate.fillOpacity = 0.5;
+polygonTemplate.fillOpacity = 0.75;
 polygonTemplate.tooltipText = "{name}";
 
 // desaturate filter for countries
 var desaturateFilter = new am4core.DesaturateFilter();
-desaturateFilter.saturation = 0.25;
+desaturateFilter.saturation = 1;
 polygonTemplate.filters.push(desaturateFilter);
 
 // take a color from color set
+var set = ["#d5e7e5", "#C4ddda", "#B0C6C4", "#9CB0AE", "#899A98", "#758482", "#626E6D"]
 polygonTemplate.adapter.add("fill", function (fill, target) {
-    return am4core.color("#333333");
+    if (target.dataItem.dataContext) {
+        var rate_male = parseInt(target.dataItem.dataContext.male)/(parseInt(target.dataItem.dataContext.male) + parseInt(target.dataItem.dataContext.female))
+        if(rate_male <= 0.55) {
+            return am4core.color(set[0])
+        }
+        else if(rate_male <= 0.625) {
+            return am4core.color(set[1])
+        }
+        else if(rate_male <= 0.675) {
+            return am4core.color(set[2])
+        }
+        else if(rate_male <= 0.725) {
+            return am4core.color(set[3])
+        }
+        else if(rate_male <= 0.775) {
+            return am4core.color(set[4])
+        }
+        else if(rate_male <= 0.85) {
+            return am4core.color(set[5])
+        }
+        else
+            return am4core.color(set[6]);
+    }
 })
 
 // set fillOpacity to 1 when hovered
@@ -280,8 +303,8 @@ countryLabel.fontSize = 40;
 countryLabel.hiddenState.properties.dy = 1000;
 countryLabel.defaultState.properties.dy = 0;
 countryLabel.valign = "middle";
-countryLabel.align = "right";
-countryLabel.marginRight = 50;
+countryLabel.align = "left";
+countryLabel.marginLeft = 50;
 countryLabel.background = new am4core.RoundedRectangle();
 countryLabel.background.fill = am4core.color("#ffffff")
 countryLabel.hide(0);
