@@ -371,6 +371,7 @@ font-family: 'Maison Neue';
 text-transform: uppercase;
 letter-spacing: 0.20rem;
 font-size: 12px;
+margin-top: 20%;
 }
 
 .map-legend-Title {
@@ -387,16 +388,15 @@ background: linear-gradient(90deg, rgba(196,221,218,1) 0%, rgba(176,198,196,1) 1
 }
 
 .map-legend-NumInitial {
-width:5%;
+width:10%;
 letter-spacing: 0.75rem;
 margin-top:4px;
-margin-left:30px;
 display:inline-block;
 float:left;
 }
 
 .map-legend-NumFinal {
-width:5%;
+width:10%;
 letter-spacing: 0.75rem;
 margin-top:4px;
 display:inline-block;
