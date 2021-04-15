@@ -269,6 +269,50 @@ margin-left:7%;
    }
 } 
 
+/* ----------------------------- TEXT SECTIONS  ----------------------------- */
+
+.text-section{
+margin-top:100px;
+margin-bottom:20%;
+
+}
+
+.text-section p{
+margin-top:30px;
+margin-bottom:40px;
+text-align:center;
+font-family: 'Maison Neue';
+font-size: 30px;
+}
+
+.text-section-pic {
+margin-top:30px;
+margin-bottom:30px;
+max-width:12%;
+}
+
+.text-section p img{
+margin: auto;
+animation: blinker 2.5s linear infinite;
+-webkit-animation: fade_move_down 4s ease-in-out infinite;
+}
+
+.smallarrow {
+width: 4%;
+height: auto;
+margin-right:20%;
+margin-left:7%;
+}
+
+.small-text-section {
+margin-bottom:50%;
+}
+
+.text-section p.bottom-paragraph {
+margin-top:200px;
+}
+
+
 
 /* ----------------------------- 100 PICTOGRAMS CHART ----------------------------- */
 
@@ -341,10 +385,99 @@ text-align: center;
     font-size: 30px;
     margin-right: 7%;
     margin-left: 7%;}
+
+.content02 p {
+text-align: center;
+    font-family: 'Maison Neue';
+    font-size: 30px;
+    margin-right: 7%;
+    margin-left: 7%;}
     
 .count{
   font-weight: bold;
+}
 
+.counter{
+  font-weight: bold;
+}
+
+.bold-number{
+  font-weight: bold;
+}
+
+/* ----------------------------- MAP CHART  ----------------------------- */
+
+#map-dist {
+  width:90%;
+  border: 1px solid #d9d9d9;
+  margin: 5%;	
+}
+
+/* ----------------------------- MAP LEGEND  ----------------------------- */
+
+.map-legend {
+width:100%;
+text-align: center;
+font-family: 'Maison Neue';
+text-transform: uppercase;
+letter-spacing: 0.20rem;
+font-size: 12px;
+margin-top: 20%;
+}
+
+.map-legend-Title {
+margin-bottom: 10px;
+margin-top: 30px;
+}
+
+.map-legend-bar {
+display:inline-block;
+width:80%;
+height: 20px;
+margin:0;
+background: linear-gradient(90deg, rgba(211,232,229,1) 0%, rgba(175,196,194,1) 58%, rgba(109,136,134,1) 100%);
+}
+
+.map-legend-NumInitial {
+width:10%;
+letter-spacing: 0.75rem;
+margin-top:4px;
+display:inline-block;
+float:left;
+}
+
+.map-legend-NumFinal {
+width:10%;
+letter-spacing: 0.75rem;
+margin-top:4px;
+display:inline-block;
+float:right;
+}
+
+
+/* ----------------------------- CHARTS  BUTTON----------------------------- */
+#switch-btn {
+    background-color: white;
+    padding: 10px 10px;
+    /* border-radius: 20px; */
+    color: black;
+    border: 1.5px solid black;
+    transition-duration: 0.4s;
+    text-transform: uppercase;
+    font-family: 'Maison Neue', serif;
+    letter-spacing: 0.75rem;
+    font-size: 0.7rem;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+#switch-btn:hover {
+  background-color: #E8ccda;
+  color: black;
+}
+
+#switch-btn:focus {
+	outline:0;
 }
 
 

@@ -251,6 +251,7 @@ line-height: 1.6;
 font-family: 'Maison Neue Book', serif;
 font-size: 0.6rem;
 margin:0;
+margin-bottom: 3px;
 text-transform: uppercase;
 }
 
@@ -312,7 +313,32 @@ font-size: 1.3rem;
 line-height: 1.6;
 margin-top:10px;
 margin-bottom:15px;
+}
 
+.theproject-content p a{
+color:black;
+text-decoration: none;
+}
+
+/* unvisited link */
+.theproject-content p a:link {
+  color: black;
+}
+
+/* visited link */
+.theproject-content p a:visited {
+  color: black;
+}
+
+/* mouse over link */
+.theproject-content p a:hover {
+  color: black;
+  opacity: .4;
+}
+
+/* selected link */
+.theproject-content p a:active {
+  color: black;
 }
 
 /* -------------------- CREDITS PAGE ---------------------- */
@@ -332,6 +358,32 @@ margin-top:10px;
 margin-bottom:15px;
 line-height: 1.6;
 
+}
+
+.credits-content p a{
+color:black;
+text-decoration: none;
+}
+
+/* unvisited link */
+.credits-content p a:link {
+  color: black;
+}
+
+/* visited link */
+.credits-content p a:visited {
+  color: black;
+}
+
+/* mouse over link */
+.credits-content p a:hover {
+  color: black;
+  opacity: .4;
+}
+
+/* selected link */
+.credits-content p a:active {
+  color: black;
 }
 
 /* -------------------- RESPONSIVNESS ---------------------- */
@@ -575,6 +627,8 @@ line-height: 1.6;
 	.theproject-content {
   	display:block;
   	top:10%;
+        height:50%;
+  	overflow-y:scroll;
   	text-align: justify;
   	text-justify: inter-word;
 	}
@@ -588,7 +642,9 @@ line-height: 1.6;
 	
 	.credits-content {
   	display:block;
-  	 width:80%;
+  	width:80%;
+	height:50%;
+  	overflow-y:scroll;
   	top:10%;
   	text-align: justify;
   	text-justify: inter-word;
