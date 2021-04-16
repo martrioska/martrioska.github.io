@@ -41,7 +41,7 @@ map_data = [{
         "female": "140"
     },
     {
-        "name": "Kingdom of the Netherlands",
+        "name": "Netherlands",
         "id": "NL",
         "male": "183",
         "female": "72"
@@ -810,6 +810,153 @@ function switch_sw_col1() {
         document.getElementById("switch-btn").firstChild.data ="Switch to Proporional View";
     }
 }
+
+var nested_pie = am4core.create("nested-pie", am4charts.PieChart);
+
+// Let's cut a hole in our Pie chart the size of 40% the radius
+nested_pie.innerRadius = am4core.percent(40);
+
+// Add data
+nested_pie.data = [
+    {
+        "institution": "German Archaeological Institute",
+        "male": "428",
+        "female": "49",
+        "country": "Germany"
+    },
+    {
+        "institution": "Acad\u00e9mie des Inscriptions et Belles-Lettres",
+        "male": "93",
+        "female": "4",
+        "country": "France"
+    },
+    {
+        "institution": "Royal Swedish Academy of Letters, History and Antiquities",
+        "male": "87",
+        "female": "12",
+        "country": "Sweden"
+    },
+    {
+        "institution": "Austrian Archaeological Institute",
+        "male": "66",
+        "female": "4",
+        "country": "Austria"
+    },
+    {
+        "institution": "Real Academia de Bellas Artes de San Fernando",
+        "male": "53",
+        "female": "3",
+        "country": "Spain"
+    },
+    {
+        "institution": "British Academy",
+        "male": "51",
+        "female": "7",
+        "country": "United Kingdom"
+    },
+    {
+        "institution": "Royal Netherlands Academy of Arts and Sciences",
+        "male": "48",
+        "female": "4",
+        "country": "Netherlands"
+    },
+    {
+        "institution": "Lincean Academy",
+        "male": "54",
+        "female": "3",
+        "country": "Italy"
+    },
+    {
+        "institution": "Hungarian Academy of Sciences",
+        "male": "31",
+        "female": "1",
+        "country": "Hungary"
+    }
+];
+
+// Add and configure Series
+var instPieSeries = nested_pie.series.push(new am4charts.PieSeries());
+
+instPieSeries.dataFields.value = "value";
+instPieSeries.dataFields.category = "category";
+instPieSeries.data = [{ value: 1838, category: "Male"}, { value: 48, category: "Female" }];
+instPieSeries.colors.list = [
+    am4core.color("#c4ddda"),
+    am4core.color("#e8cdda")
+]
+
+instPieSeries.slices.template.stroke = am4core.color("#fff");
+instPieSeries.slices.template.strokeWidth = 2;
+instPieSeries.slices.template.strokeOpacity = 1;
+
+// Disabling labels and ticks on inner circle
+instPieSeries.labels.template.disabled = true;
+instPieSeries.ticks.template.disabled = true;
+
+// Disable sliding out of slices
+instPieSeries.slices.template.states.getKey("hover").properties.shiftRadius = 0;
+instPieSeries.slices.template.states.getKey("hover").properties.scale = 0.9;
+
+// Add second series
+var instPieSeries2 = nested_pie.series.push(new am4charts.PieSeries());
+instPieSeries2.colors.list = [
+    am4core.color("#c4ddda"),
+    am4core.color("#e8cdda")
+]
+
+instPieSeries2.dataFields.value = "value";
+instPieSeries2.dataFields.category = "category";
+instPieSeries2.data = [{ value: 428, category: "Male" }, { value: 49, category: "Female" }];
+instPieSeries2.slices.template.stroke = am4core.color("#fff");
+instPieSeries2.slices.template.strokeWidth = 2;
+instPieSeries2.slices.template.strokeOpacity = 1;
+instPieSeries2.slices.template.states.getKey("hover").properties.shiftRadius = 0;
+instPieSeries2.slices.template.states.getKey("hover").properties.scale = 1.1;
+
+var instLabel = nested_pie.chartContainer.createChild(am4core.Label);
+instLabel.text = "German\nArchaeological\nInstitute";
+instLabel.fill = am4core.color("#333333");
+instLabel.fontSize = 40;
+
+instLabel.hiddenState.properties.dy = 1000;
+instLabel.defaultState.properties.dy = 0;
+instLabel.valign = "middle";
+instLabel.align = "left";
+instLabel.marginLeft = 50;
+instLabel.background = new am4core.RoundedRectangle();
+instLabel.background.fill = am4core.color("#ffffff")
+instLabel.hide(0);
+instLabel.show();
+
+function inst_countries() {
+    var country = document.getElementById("inst-countries").value;
+    for (var i = 0; i < instPieSeries.dataItems.length; i++) {
+        var innerDataItem = instPieSeries.dataItems.getIndex(i);
+        var outerDataItem = instPieSeries2.dataItems.getIndex(i);
+        var inst, loc;
+        for (var j = 0; j < nested_pie.data.length; j++) {
+            if(nested_pie.data[j]["country"] == country) {
+                inst = nested_pie.data[j]
+            }
+        }
+        for (var j = 0; j < map_data.length; j++) {
+            if(map_data[j]["name"] == country) {
+                loc = map_data[j]
+            }
+        }
+
+        instLabel.text = inst["institution"].replaceAll(" ", "\n")
+        if (i == 0) {
+            innerDataItem.value = loc["male"];
+            outerDataItem.value = inst["male"];
+        }
+        else {
+            innerDataItem.value = loc["female"];
+            outerDataItem.value = inst["female"];
+        }
+    }
+}
+
 
 
 
