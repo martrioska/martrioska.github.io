@@ -1,9 +1,6 @@
-window.scroll(0, 10)
+// ----------- PAGE TRANSISITION -------------
 
-setTimeout(function(){ 
-document.getElementById("content01").style.opacity = "1"; 
-// document.body.style.overflowY = "visible";
-}, 8000);
+window.scroll(0, 0)
 
 setTimeout(function(){ 
 document.querySelector('body').style.opacity = 1
@@ -16,9 +13,8 @@ window.transitionToPage = function(href) {
     }, 400)
 }
 
-$(".line3 img").hide().each(function(i) {
-  $(this).delay(i*50).fadeIn(200);
-});
+
+// ----------- BLOCK OVERFLOW -------------
 
 // $(document).ready(function () {
 // 	$("body").css({"overflow-y":"visible"});
@@ -32,37 +28,48 @@ $(".line3 img").hide().each(function(i) {
 //     });
         
 
-$(window).scroll(function() {        
-var d = document.getElementById("intro");
-	var myposition = d.offsetTop + d.offsetHeight - $('#mtrk-header').outerHeight()
-    if ($(window).scrollTop() > myposition) {
     
-    $(".count").each(function () {
-  $(this)
-    .prop("Counter", 0)
-    .animate(
-      {
-        Counter: $(this).text()
-      },
-      {
-        duration: 4000,
-        easing: "swing",
-        step: function (now) {
-          $(this).text(Math.ceil(now));
-        }
-      }
-    );
+// ----------- CASCADING APPEARING PARAGRAPH -------------
+
+$(document).ready(function() { 
+   $('#word1, #word2, #word3, #word4').each(function(fadeInDiv) {
+     $(this).delay(fadeInDiv * 3500).fadeIn(2200);
+   });
 });
+
+
+// -----------MATRIOSKA PICTOGRAMS-------------
+
+
+
+$(window).on('scroll.scroll1',function() {
+    if (checkVisible($('.line3'))) { 
+    $(".line3 img").hide().each(function(i) {
+  		$(this).delay(i*50).fadeIn(200);
+		});
+        $(window).off('scroll.scroll1');
+    } else {
+         // no nothing
     }
-});     
- 
-
-window.onload = function() {
-$("#intro p").hide().each(function(i) {
-  $(this).delay(i*3500).fadeIn(2200);
 });
 
- }
+
+function checkVisible( elm, eval ) {
+    eval = eval || "object visible";
+    var viewportHeight = $(window).height(), // Viewport Height
+        scrolltop = $(window).scrollTop(), // Scroll Top
+        y = $(elm).offset().top,
+        elementHeight = $(elm).height();   
+    
+    if (eval == "object visible") return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
+    if (eval == "above") return ((y < (viewportHeight + scrolltop)));
+}
+
+
+
+
+
+// ----------- SCROLL MAIN BAR FUNCTIONS -------------
 
 $(window).scroll(function() {
     if ($(window).scrollTop() < 700) {
@@ -181,7 +188,7 @@ $(window).scroll(function() {
     }
 });
 
-
+// ----------- SIDE BAR BUTTONS FUNCTIONS -------------
 
 function changeImageOne() {
     var image = document.getElementById('mtrsk1');
