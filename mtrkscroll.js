@@ -37,22 +37,7 @@ $(document).ready(function() {
    });
 });
 
-
-// -----------MATRIOSKA PICTOGRAMS-------------
-
-
-
-$(window).on('scroll.scroll1',function() {
-    if (checkVisible($('.line3'))) { 
-    $(".line3 img").hide().each(function(i) {
-  		$(this).delay(i*50).fadeIn(200);
-		});
-        $(window).off('scroll.scroll1');
-    } else {
-         // no nothing
-    }
-});
-
+// ----------- VISIBILITY CHECKER-------------
 
 function checkVisible( elm, eval ) {
     eval = eval || "object visible";
@@ -65,7 +50,73 @@ function checkVisible( elm, eval ) {
     if (eval == "above") return ((y < (viewportHeight + scrolltop)));
 }
 
+// -----------MATRIOSKA PICTOGRAMS-------------
 
+
+
+$(window).on('scroll.scroll1',function() {
+    if (checkVisible($('.line3'))) { 
+    $(".line3 img").hide().each(function(i) {
+  		$(this).delay(i*50).fadeIn(200);
+		});
+        $(window).off('scroll.scroll1');
+    } else {
+         // do nothing
+    }
+});
+
+
+
+// ----------- COUNTER -----------------
+
+$(window).on('scroll.scroll2',function() {
+    if (checkVisible($('.count-section1'))) { 
+	$(".count").each(function () {
+  $(this)
+    .prop("Counter", 0)
+    .animate(
+      {
+        Counter: $(this).text()
+      },
+      {
+        duration: 1600,
+        easing: "swing",
+        step: function (now) {
+          $(this).text(Math.ceil(now));
+        }
+      }
+    );
+});
+        $(window).off('scroll.scroll2');
+    } else {
+         // do nothing
+    }
+});
+
+
+$(window).on('scroll.scroll3',function() {
+    if (checkVisible($('.count-section2'))) { 
+   			$(".count").each(function () {
+  $(this)
+    .prop("Counter", 0)
+    .animate(
+      {
+        Counter: $(this).text()
+      },
+      {
+        duration: 1600,
+        easing: "swing",
+        step: function (now) {
+          $(this).text(Math.ceil(now));
+        }
+      }
+    );
+});
+        $(window).off('scroll.scroll3');
+    } else {
+         // do nothing
+    }
+});
 
 
 
