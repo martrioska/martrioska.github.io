@@ -94,9 +94,12 @@ $(window).on('scroll.scroll2',function() {
 });
 
 
-$(window).on('scroll.scroll3',function() {
+
+
+$(window).on('scroll.scroll7',function() {
     if (checkVisible($('.count-section2'))) { 
-   			$(".count").each(function () {
+		$('.count-section-text').delay(2000).fadeIn(2000);
+		$(".count2").each(function () {
   $(this)
     .prop("Counter", 0)
     .animate(
@@ -104,7 +107,7 @@ $(window).on('scroll.scroll3',function() {
         Counter: $(this).text()
       },
       {
-        duration: 1600,
+        duration: 3000,
         easing: "swing",
         step: function (now) {
           $(this).text(Math.ceil(now));
@@ -112,12 +115,55 @@ $(window).on('scroll.scroll3',function() {
       }
     );
 });
-        $(window).off('scroll.scroll3');
+        $(window).off('scroll.scroll7');
     } else {
          // do nothing
     }
 });
 
+// ----------- FADE IN MATRIOSKA -------------
+
+$(window).on('scroll.scroll4',function() {
+    if (checkVisible($('.after-arrow-p'))) { 
+		$('.text-section-pic').fadeTo(4000, 1);
+		$('.smallarrow').delay(4000).fadeIn(2000);
+        $(window).off('scroll.scroll4');
+    } else {
+         // do nothing
+    }
+});
+
+$(window).on('scroll.scroll5',function() {
+    if (checkVisible($('.after-arrow-p2'))) { 
+		$('.text-section-pic2').fadeTo(4000, 1);
+		$('.text-section-pic3').delay(3000).fadeTo(4000, 0.8);
+		$('.smallarrow').delay(4000).fadeIn(2000);
+        $(window).off('scroll.scroll5');
+    } else {
+         // do nothing
+    }
+});
+
+// ----------- FADE IN TEXT SECTION -------------
+
+$(window).on('scroll.scroll6',function() {
+    if (checkVisible($('.double-text-section1'))) { 
+		$('.text-section-below').delay(2000).fadeIn(2000);
+        $(window).off('scroll.scroll6');
+    } else {
+         // do nothing
+    }
+});
+
+$(window).on('scroll.scroll8',function() {
+    if (checkVisible($('.text-section-start'))) { 
+		$('.bottom-paragraph').delay(2000).fadeIn(2000);
+		$('.smallarrow').hide().delay(4000).fadeIn(2000);
+        $(window).off('scroll.scroll8');
+    } else {
+         // do nothing
+    }
+});
 
 
 // ----------- SCROLL MAIN BAR FUNCTIONS -------------
