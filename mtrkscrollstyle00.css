@@ -387,8 +387,88 @@ display:none;
 margin-top: 100px;
 }
 
+/* ----------------------------- opening matrioska ----------------------------- */
 
+.container-img2 {
+    position: relative;
+    width:100%;
+    height:40vh;
+    margin-top:30px;
+	margin-bottom:30px;
+	
+}
 
+.imageTwo2 {
+display: block;
+}
+
+.imageTwo2 img{
+	position: absolute;
+	top:0;
+	left:44%;
+	
+}
+
+.imageOne2 img{
+	position: absolute;
+	top:0;
+	left:44%;
+}
+
+.text-section-pic4 {
+margin-top:30px;
+margin-bottom:30px;
+max-width:12%;
+
+}
+
+.text-section-pic5 {
+margin-top:30px;
+margin-bottom:30px;
+max-width:12%;
+
+}
+
+.containerFloatM {
+margin-top:100px;}
+
+.float {
+    position: relative;
+    -webkit-animation: floatBubble 3s forwards 1 ease-out;
+    animation: floatBubble 3s forwards 1 ease-out;
+}
+@-webkit-keyframes floatBubble {
+    0% {
+        top:0px;
+    }
+    100% {
+        top: -80px;
+    }
+}
+@keyframes floatBubble {
+    0% {
+        top:0px;
+    }
+    100% {
+        top: -80px;
+    }
+}
+
+/* -----------------------------  FLAGS ----------------------------- */
+.flag-images {
+margin-top:100px;
+width:100%;
+}
+.flag-image {
+margin-top:30px;
+margin-bottom:30px;
+max-width:12%;
+opacity:0;
+}
+.flag-image2 {
+margin-right:100px;
+margin-left:100px;
+}
 
 /* ----------------------------- 100 PICTOGRAMS CHART ----------------------------- */
 
@@ -493,7 +573,9 @@ text-align: center;
 }
 
 /* ----------------------------- MAP LEGEND  ----------------------------- */
-
+.spaced-p {
+margin-bottom:150px !important; 
+}
 .map-legend {
 width:100%;
 text-align: center;
@@ -501,7 +583,7 @@ font-family: 'Maison Neue';
 text-transform: uppercase;
 letter-spacing: 0.20rem;
 font-size: 12px;
-margin-top: 20%;
+margin-top: 10%;
 }
 
 .map-legend-Title {
@@ -638,6 +720,15 @@ float:right;
 /* ----------------------------- RESPONSIVE DESIGN  ----------------------------- */
 
 @media screen and (max-width: 800px) {
+
+	.intro p{
+	text-align:center;
+	font-family: 'Maison Neue';
+	font-size: 30px;
+	margin-right:20%;
+	margin-left:7%;
+	display:none;
+	}
 
 	.right-bar a {
 	font-size: 0.6rem;

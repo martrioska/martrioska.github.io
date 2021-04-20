@@ -37,6 +37,7 @@ $(document).ready(function() {
    });
 });
 
+
 // ----------- VISIBILITY CHECKER-------------
 
 function checkVisible( elm, eval ) {
@@ -160,6 +161,30 @@ $(window).on('scroll.scroll8',function() {
 		$('.bottom-paragraph').delay(2000).fadeIn(2000);
 		$('.smallarrow').hide().delay(4000).fadeIn(2000);
         $(window).off('scroll.scroll8');
+    } else {
+         // do nothing
+    }
+});
+
+// ----------- OPENING MATRIOSKA -------------
+
+$(window).on('scroll.scroll9',function() {
+    if (checkVisible($('.after-image-flag'))) { 
+		$('.text-section-pic5').delay(2000).last().addClass( "float" );
+        $(window).off('scroll.scroll9');
+    } else {
+         // do nothing
+    }
+});
+
+// ----------- CASCADING APPEARING FLAGS -------------
+
+$(window).on('scroll.scroll10',function() {
+    if (checkVisible($('.after-image-flag2'))) { 
+		$('.flag-image1, .flag-image2, .flag-image3').each(function(fadeInDiv) {
+     $(this).delay(fadeInDiv * 1000).fadeTo(4000, 1);
+   });
+        $(window).off('scroll.scroll10');
     } else {
          // do nothing
     }
