@@ -1,4 +1,4 @@
-// ----------- PAGE TRANSISITION -------------
++// ----------- PAGE TRANSISITION -------------
 
 window.scroll(0, 0)
 
@@ -177,18 +177,20 @@ $(window).on('scroll.scroll9',function() {
     }
 });
 
-// ----------- CASCADING APPEARING FLAGS -------------
+// ----------- CASCADING APPEARING COUNTRIES -------------
 
-$(window).on('scroll.scroll10',function() {
-    if (checkVisible($('.after-image-flag2'))) { 
-		$('.flag-image1, .flag-image2, .flag-image3').each(function(fadeInDiv) {
+$(window).on('scroll.scroll15',function() {
+    if (checkVisible($('.late-text-section'))) { 
+		$('.estonia-text, .slovenia-text').each(function(fadeInDiv) {
      $(this).delay(fadeInDiv * 1000).fadeTo(4000, 1);
    });
-        $(window).off('scroll.scroll10');
+        $(window).off('scroll.scroll15');
     } else {
          // do nothing
     }
 });
+
+
 
 // ----------- REANIMATING THE CHARTS -------------
 
@@ -246,6 +248,19 @@ $(window).on('scroll.scroll14',function() {
         }
     } else {
          nested_pie['flag'] = false;
+    }
+});
+
+// ----------- CASCADING APPEARING FLAGS -------------
+
+$(window).on('scroll.scroll10',function() {
+    if (checkVisible($('.after-image-flag2'))) { 
+		$('.flag-image1, .flag-image2, .flag-image3').each(function(fadeInDiv) {
+     $(this).delay(fadeInDiv * 1000).fadeTo(4000, 1);
+   });
+        $(window).off('scroll.scroll10');
+    } else {
+         // do nothing
     }
 });
 
@@ -425,6 +440,4 @@ function changeImageFive() {
     image.src = "svg/closedmtr.svg";
     }
 }
-
-
 

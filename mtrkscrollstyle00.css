@@ -387,6 +387,18 @@ display:none;
 margin-top: 100px;
 }
 
+.late-text-section {
+margin-top: 200px;
+}
+
+.estonia-text {
+opacity:0;
+}
+
+.slovenia-text {
+opacity:0;
+}
+
 /* ----------------------------- opening matrioska ----------------------------- */
 
 .container-img2 {
@@ -640,6 +652,31 @@ float:right;
 #switch-btn:focus {
 	outline:0;
 }
+/* ----------------------------- SELECT BUTTON  ----------------------------- */
+
+#inst-countries {
+margin-bottom:100px;
+background-color: white;
+padding: 10px 10px;
+text-transform: uppercase;
+font-family: 'Maison Neue', serif;
+letter-spacing: 0.75rem;
+font-size: 0.7rem;
+background-image: url('svg/arrow.svg');
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: 1.6em auto, 100%;
+    -webkit-appearance: none;
+padding-right:25px;
+}
+
+#inst-countries:focus {
+	outline:0;
+}
+
+
+
+
 
 /* ----------------------------- MAP CHART  ----------------------------- */
 
