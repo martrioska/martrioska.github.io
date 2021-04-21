@@ -190,6 +190,7 @@ $(window).on('scroll.scroll10',function() {
     }
 });
 
+<<<<<<< HEAD
 // ----------- CASCADING APPEARING COUNTRIES -------------
 
 $(window).on('scroll.scroll11',function() {
@@ -203,9 +204,12 @@ $(window).on('scroll.scroll11',function() {
     }
 });
 
+
 // ----------- REANIMATING THE CHARTS -------------
 
 $(window).on('scroll.scroll15',function() {
+$(window).on('scroll.scroll11',function() {
+>>>>>>> 148ee5758bbfd0848264e265fd0f57abbc91b842
     if (checkVisible($('#map-dist'))) { 
         if ('flag' in geo_dist && !geo_dist['flag']) {
             geo_dist.appear();
@@ -262,7 +266,10 @@ $(window).on('scroll.scroll14',function() {
     }
 });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 148ee5758bbfd0848264e265fd0f57abbc91b842
 
 // ----------- SCROLL MAIN BAR FUNCTIONS -------------
 
