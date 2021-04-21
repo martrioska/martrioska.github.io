@@ -207,7 +207,6 @@ $(window).on('scroll.scroll11',function() {
 
 // ----------- REANIMATING THE CHARTS -------------
 
-$(window).on('scroll.scroll15',function() {
 $(window).on('scroll.scroll11',function() {
 >>>>>>> 148ee5758bbfd0848264e265fd0f57abbc91b842
     if (checkVisible($('#map-dist'))) { 
