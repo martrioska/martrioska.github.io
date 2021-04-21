@@ -798,6 +798,8 @@ function switch_sw_col1() {
         sw_col2.data = scholarly_data['proporional'];
         sw_col2.flag = 'proporional';
         sw2_valueAxis.strictMinMax = true;
+        sw_col1.appear();
+        sw_col2.appear();
         document.getElementById("switch-btn").firstChild.data ="Switch to Normal View";
     }
     else if (sw_col1.flag === 'proporional') {
@@ -807,6 +809,8 @@ function switch_sw_col1() {
         sw_col2.data = scholarly_data['normal'];
         sw_col2.flag = 'normal';
         sw2_valueAxis.strictMinMax = false;
+        sw_col1.appear();
+        sw_col2.appear();
         document.getElementById("switch-btn").firstChild.data ="Switch to Proporional View";
     }
 }

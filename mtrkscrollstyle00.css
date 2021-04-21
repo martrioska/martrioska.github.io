@@ -646,7 +646,10 @@ float:right;
 
 #switch-btn:hover {
   background-color: #E8ccda;
+  border: 1.5px solid #E8ccda;
   color: black;
+  box-shadow: 5px 10px #888888;
+  cursor: pointer;
 }
 
 #switch-btn:focus {
@@ -668,13 +671,20 @@ background-image: url('svg/arrow.svg');
     background-size: 1.6em auto, 100%;
     -webkit-appearance: none;
 padding-right:25px;
+transition-duration: 0.4s;
 }
 
 #inst-countries:focus {
 	outline:0;
 }
 
-
+#inst-countries:hover {
+  background-color: #E8ccda;
+  border: 1.5px solid #E8ccda;
+  color: black;
+  box-shadow: 5px 10px #888888;
+  cursor: pointer;
+}
 
 
 
