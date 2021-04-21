@@ -190,6 +190,65 @@ $(window).on('scroll.scroll10',function() {
     }
 });
 
+// ----------- REANIMATING THE CHARTS -------------
+
+$(window).on('scroll.scroll11',function() {
+    if (checkVisible($('#map-dist'))) { 
+        if ('flag' in geo_dist && !geo_dist['flag']) {
+            geo_dist.appear();
+            geo_dist.series.each(function(series) {
+                series.appear();
+            });
+            geo_dist['flag'] = true;
+        }
+    } else {
+         geo_dist['flag'] = false;
+    }
+});
+
+
+$(window).on('scroll.scroll12',function() {
+    if (checkVisible($('#sw-col1'))) { 
+        if ('flag' in sw_col1 && !sw_col1['flag']) {
+            sw_col1.appear();
+            sw_col1.series.each(function(series) {
+                series.appear();
+            });
+            sw_col1['flag'] = true;
+        }
+    } else {
+         sw_col1['flag'] = false;
+    }
+});
+
+$(window).on('scroll.scroll13',function() {
+    if (checkVisible($('#sw-col2'))) { 
+        if ('flag' in sw_col2 && !sw_col2['flag']) {
+            sw_col2.appear();
+            sw_col2.series.each(function(series) {
+                series.appear();
+            });
+            sw_col2['flag'] = true;
+        }
+    } else {
+         sw_col2['flag'] = false;
+    }
+});
+
+$(window).on('scroll.scroll14',function() {
+    if (checkVisible($('#nested-pie'))) { 
+        if ('flag' in nested_pie && !nested_pie['flag']) {
+            nested_pie.appear();
+            nested_pie.series.each(function(series) {
+                series.appear();
+            });
+            nested_pie['flag'] = true;
+        }
+    } else {
+         nested_pie['flag'] = false;
+    }
+});
+
 
 // ----------- SCROLL MAIN BAR FUNCTIONS -------------
 
