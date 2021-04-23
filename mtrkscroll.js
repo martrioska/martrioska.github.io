@@ -166,6 +166,16 @@ $(window).on('scroll.scroll8',function() {
     }
 });
 
+$(window).on('scroll.scroll18',function() {
+    if (checkVisible($('.text-section-initial'))) { 
+		$('.bottom-paragraph2').delay(1500).fadeIn(2000);
+		$('.second-arrow').delay(4000).fadeIn(2000);
+        $(window).off('scroll.scroll18');
+    } else {
+         // do nothing
+    }
+});
+
 // ----------- OPENING MATRIOSKA -------------
 
 $(window).on('scroll.scroll9',function() {
@@ -176,6 +186,8 @@ $(window).on('scroll.scroll9',function() {
          // do nothing
     }
 });
+
+
 
 // ----------- CASCADING APPEARING COUNTRIES -------------
 
@@ -259,6 +271,48 @@ $(window).on('scroll.scroll10',function() {
      $(this).delay(fadeInDiv * 1000).fadeTo(4000, 1);
    });
         $(window).off('scroll.scroll10');
+    } else {
+         // do nothing
+    }
+});
+
+// ----------- OPENING MATRIOSKA 2 -------------
+
+$(window).on('scroll.scroll17',function() {
+    if (checkVisible($('.after-image-flag-new'))) { 
+		$('.text-section-pic6').delay(2000).last().addClass( "float" );
+        $(window).off('scroll.scroll17');
+    } else {
+         // do nothing
+    }
+});
+
+// ----------- CASCADING PARAGRAPHS + CIRCLES -------------
+
+$(window).on('scroll.scroll19',function() {
+    if (checkVisible($('.circles-text-section'))) { 
+		$('.circles-text-second-p').delay(1000).fadeTo(3000,1);
+		$('.circles-container').delay(2000).fadeTo(3000,1);
+		$('.after-circles-flag').delay(3000).fadeTo(3000,1);
+        $(window).off('scroll.scroll19');
+    } else {
+         // do nothing
+    }
+});
+
+// ----------- MOVING CIRCLES -------------
+
+$(window).on('scroll.scroll20',function() {
+    if (checkVisible($('.after-circles-flag'))) { 
+		$('.circle-full-image').delay(5000).fadeOut(3000);
+		$('.circle-full-plus').delay(8000).fadeOut(3000);
+		setTimeout(function(){
+		$('.empty-circle-one').addClass( "move-to-right" );
+		$('.empty-circle-two').addClass( "move-to-left" );
+       
+   }, 8000);
+		
+        $(window).off('scroll.scroll20');
     } else {
          // do nothing
     }

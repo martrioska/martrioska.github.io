@@ -342,12 +342,27 @@ margin-left:7%;
 display:none;
 }
 
+.smallarrow-single {
+width: 4%;
+height: auto;
+margin-right:20%;
+margin-left:7%;
+}
+.second-arrow {
+display:none;
+}
+
 .small-text-section {
 margin-bottom:50%;
 }
 
 .text-section p.bottom-paragraph {
 margin-top:200px;
+display: none;
+}
+
+.text-section p.bottom-paragraph2 {
+margin-top:100px;
 display: none;
 }
 
@@ -410,6 +425,15 @@ opacity:0;
 	
 }
 
+.container-img3 {
+    position: relative;
+    width:100%;
+    height:40vh;
+    margin-top:30px;
+	margin-bottom:30px;
+	
+}
+
 .imageTwo2 {
 display: block;
 }
@@ -427,6 +451,12 @@ display: block;
 	left:44%;
 }
 
+.imageOne3 img{
+	position: absolute;
+	top:0;
+	left:20%;
+}
+
 .text-section-pic4 {
 margin-top:30px;
 margin-bottom:30px;
@@ -439,6 +469,26 @@ margin-top:30px;
 margin-bottom:30px;
 max-width:12%;
 
+}
+
+.text-section-pic6 {
+margin-top:30px;
+margin-bottom:30px;
+max-width:10%;
+
+}
+
+.text-section-pic7 {
+margin-top:30px;
+margin-bottom:30px;
+max-width:10%;
+
+}
+
+.text-section-pic-open{
+margin-top:0px;
+margin-bottom:29px;
+max-width:12%;
 }
 
 .containerFloatM {
@@ -481,6 +531,84 @@ opacity:0;
 margin-right:100px;
 margin-left:100px;
 }
+
+/* -----------------------------  MOVING CIRCLES  ----------------------------- */
+
+.circles-container {
+width: 100%;
+height: 20vh;
+position: relative;
+margin-top:140px;
+}
+
+.circle-one img{
+	position: absolute;
+	top:0;
+	left:20%;
+	max-width:12%;
+	
+}
+
+.circle-two img{
+	position: absolute;
+	top:0;
+	left:70%;
+	max-width:12%;
+}
+
+.circle-one-plus img{
+	position: absolute;
+	top:0;
+	left:45%;
+	max-width:12%;
+	
+}
+
+.move-to-right {
+    position: relative;
+    -webkit-animation: moveRight 3s forwards 1 ease-out;
+    animation: moveRight 3s forwards 1 ease-out;
+}
+
+.move-to-left {
+    position: relative;
+    -webkit-animation: moveLeft 3s forwards 1 ease-out;
+    animation: moveLeft 3s forwards 1 ease-out;
+}
+
+@-webkit-keyframes moveRight {
+    0% {
+        left:0%;
+    }
+    100% {
+        left:25%;
+    }
+}
+@keyframes moveLeft {
+    0% {
+        left:0%;
+    }
+    100% {
+        left:-25%;
+    }
+}
+
+.circles-text-second-p {
+opacity: 0;
+}
+
+.circles-container {
+opacity: 0;
+}
+
+.after-circles-flag  {
+opacity: 0;
+}
+
+.circles-text-section {
+margin-bottom: 80vh;
+}
+
 
 /* ----------------------------- 100 PICTOGRAMS CHART ----------------------------- */
 
@@ -587,6 +715,9 @@ text-align: center;
 /* ----------------------------- MAP LEGEND  ----------------------------- */
 .spaced-p {
 margin-bottom:150px !important; 
+}
+.spaced-p2 {
+margin-bottom:80px !important; 
 }
 .map-legend {
 width:100%;
