@@ -263,6 +263,24 @@ $(window).on('scroll.scroll14',function() {
     }
 });
 
+$(window).on('scroll.scroll15',function() {
+    if (checkVisible($('#alt-occ-female'))) { 
+        if ('flag' in female_occ_chart && !female_occ_chart['flag']) {
+            female_occ_chart.appear();
+            female_occ_chart.series.each(function(series) {
+                series.appear();
+            });
+            female_occ_chart['flag'] = true;
+            male_occ_chart.appear();
+            male_occ_chart.series.each(function(series) {
+                series.appear();
+            });
+        }
+    } else {
+         female_occ_chart['flag'] = false;
+    }
+});
+
 // ----------- CASCADING APPEARING FLAGS -------------
 
 $(window).on('scroll.scroll10',function() {

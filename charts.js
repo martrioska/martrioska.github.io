@@ -206,11 +206,14 @@ desaturateFilter.saturation = 1;
 polygonTemplate.filters.push(desaturateFilter);
 
 // take a color from color set
-var set = ["#d5e7e5", "#C4ddda", "#B0C6C4", "#9CB0AE", "#899A98", "#758482", "#626E6D"]
+var set = ["#d5e7e5", "#C4ddda", "#B0C6C4", "#9CB0AE", "#899A98", "#758482", "#626E6D", "#e8cdda"]
 polygonTemplate.adapter.add("fill", function (fill, target) {
     if (target.dataItem.dataContext) {
         var rate_male = parseInt(target.dataItem.dataContext.male)/(parseInt(target.dataItem.dataContext.male) + parseInt(target.dataItem.dataContext.female))
-        if(rate_male <= 0.55) {
+        if(rate_male <= 0.50) {
+            return am4core.color(set[7])
+        }
+        else if(rate_male <= 0.55) {
             return am4core.color(set[0])
         }
         else if(rate_male <= 0.625) {
@@ -815,6 +818,216 @@ function switch_sw_col1() {
     }
 }
 
+/////////// FEMALE OCCUPATION CHARTS ///////////
+
+var female_occ_chart = am4core.create("alt-occ-female", am4charts.XYChart);
+
+// Add data
+female_occ_chart.data = [
+    {
+        "gender": "female",
+        "occupation": "university teacher",
+        "number": 243
+    },
+    {
+        "gender": "female",
+        "occupation": "writer",
+        "number": 185
+    },
+    {
+        "gender": "female",
+        "occupation": "exhibition curator",
+        "number": 127
+    },
+    {
+        "gender": "female",
+        "occupation": "curator",
+        "number": 114
+    },
+    {
+        "gender": "female",
+        "occupation": "archaeologist",
+        "number": 100
+    },
+    {
+        "gender": "female",
+        "occupation": "historian",
+        "number": 92
+    },
+    {
+        "gender": "female",
+        "occupation": "art critic",
+        "number": 73
+    },
+    {
+        "gender": "female",
+        "occupation": "architectural historian",
+        "number": 53
+    },
+    {
+        "gender": "female",
+        "occupation": "translator",
+        "number": 44
+    },
+    {
+        "gender": "female",
+        "occupation": "journalist",
+        "number": 41
+    },
+    // {
+    //     "gender": "female",
+    //     "occupation": "teacher",
+    //     "number": 40
+    // },
+    // {
+    //     "gender": "female",
+    //     "occupation": "author",
+    //     "number": 38
+    // },
+    // {
+    //     "gender": "female",
+    //     "occupation": "librarian",
+    //     "number": 35
+    // },
+    // {
+    //     "gender": "female",
+    //     "occupation": "museum director",
+    //     "number": 35
+    // },
+    // {
+    //     "gender": "female",
+    //     "occupation": "architect",
+    //     "number": 30
+    // }
+];
+
+female_occ_chart.colors.list = [
+    am4core.color("#e8cdda")
+]
+// Create axes
+var categoryAxis = female_occ_chart.yAxes.push(new am4charts.CategoryAxis());
+categoryAxis.dataFields.category = "occupation";
+categoryAxis.numberFormatter.numberFormat = "#";
+categoryAxis.renderer.inversed = true;
+
+var  valueAxis = female_occ_chart.xAxes.push(new am4charts.ValueAxis()); 
+
+// Create series
+var female_occ_chart_series = female_occ_chart.series.push(new am4charts.ColumnSeries());
+female_occ_chart_series.dataFields.valueX = "number";
+female_occ_chart_series.dataFields.categoryY = "occupation";
+female_occ_chart_series.name = "number";
+female_occ_chart_series.columns.template.propertyFields.fill = am4core.color("#c4ddda");
+female_occ_chart_series.columns.template.tooltipText = "{valueX} female {categoryY}s";
+female_occ_chart_series.columns.template.column.stroke = am4core.color("#fff");
+female_occ_chart_series.columns.template.column.strokeOpacity = 0.2;
+
+/////////// MALE OCCUPATION CHARTS ///////////
+
+var male_occ_chart = am4core.create("alt-occ-male", am4charts.XYChart);
+
+// Add data
+male_occ_chart.data = [
+    {
+        "gender": "male",
+        "occupation": "university teacher",
+        "number": 1356
+    },
+    {
+        "gender": "male",
+        "occupation": "archaeologist",
+        "number": 759
+    },
+    {
+        "gender": "male",
+        "occupation": "writer",
+        "number": 653
+    },
+    {
+        "gender": "male",
+        "occupation": "architectural historian",
+        "number": 458
+    },
+    {
+        "gender": "male",
+        "occupation": "historian",
+        "number": 398
+    },
+    {
+        "gender": "male",
+        "occupation": "architect",
+        "number": 344
+    },
+    {
+        "gender": "male",
+        "occupation": "painter",
+        "number": 280
+    },
+    {
+        "gender": "male",
+        "occupation": "art critic",
+        "number": 280
+    },
+    {
+        "gender": "male",
+        "occupation": "curator",
+        "number": 252
+    },
+    {
+        "gender": "male",
+        "occupation": "exhibition curator",
+        "number": 207
+    },
+    // {
+    //     "gender": "male",
+    //     "occupation": "journalist",
+    //     "number": 195
+    // },
+    // {
+    //     "gender": "male",
+    //     "occupation": "anthropologist",
+    //     "number": 167
+    // },
+    // {
+    //     "gender": "male",
+    //     "occupation": "teacher",
+    //     "number": 154
+    // },
+    // {
+    //     "gender": "male",
+    //     "occupation": "author",
+    //     "number": 140
+    // },
+    // {
+    //     "gender": "male",
+    //     "occupation": "poet",
+    //     "number": 137
+    // }
+];
+
+male_occ_chart.colors.list = [
+    am4core.color("#c4ddda")
+]
+// Create axes
+var categoryAxis = male_occ_chart.yAxes.push(new am4charts.CategoryAxis());
+categoryAxis.dataFields.category = "occupation";
+categoryAxis.numberFormatter.numberFormat = "#";
+categoryAxis.renderer.inversed = true;
+
+var  valueAxis = male_occ_chart.xAxes.push(new am4charts.ValueAxis()); 
+
+// Create series
+var male_occ_chart_series = male_occ_chart.series.push(new am4charts.ColumnSeries());
+male_occ_chart_series.dataFields.valueX = "number";
+male_occ_chart_series.dataFields.categoryY = "occupation";
+male_occ_chart_series.name = "number";
+male_occ_chart_series.columns.template.propertyFields.fill = am4core.color("#c4ddda");
+male_occ_chart_series.columns.template.tooltipText = "{valueX} male {categoryY}s";
+male_occ_chart_series.columns.template.column.stroke = am4core.color("#fff");
+male_occ_chart_series.columns.template.column.strokeOpacity = 0.2;
+
+/////////////// NESTED PIE CHART //////////////
+
 var nested_pie = am4core.create("nested-pie", am4charts.PieChart);
 
 // Let's cut a hole in our Pie chart the size of 40% the radius
@@ -883,7 +1096,7 @@ var instPieSeries = nested_pie.series.push(new am4charts.PieSeries());
 
 instPieSeries.dataFields.value = "value";
 instPieSeries.dataFields.category = "category";
-instPieSeries.data = [{ value: 1838, category: "Male"}, { value: 48, category: "Female" }];
+instPieSeries.data = [{ value: 1838, category: "Male"}, { value: 448, category: "Female" }];
 instPieSeries.colors.list = [
     am4core.color("#c4ddda"),
     am4core.color("#e8cdda")
@@ -900,6 +1113,7 @@ instPieSeries.ticks.template.disabled = true;
 // Disable sliding out of slices
 instPieSeries.slices.template.states.getKey("hover").properties.shiftRadius = 0;
 instPieSeries.slices.template.states.getKey("hover").properties.scale = 0.9;
+instPieSeries.slices.template.tooltipText = "{category} Art Historians in the Country: {value}";
 
 // Add second series
 var instPieSeries2 = nested_pie.series.push(new am4charts.PieSeries());
@@ -916,6 +1130,8 @@ instPieSeries2.slices.template.strokeWidth = 2;
 instPieSeries2.slices.template.strokeOpacity = 1;
 instPieSeries2.slices.template.states.getKey("hover").properties.shiftRadius = 0;
 instPieSeries2.slices.template.states.getKey("hover").properties.scale = 1.1;
+instPieSeries2.slices.template.tooltipText = "{category} Art Historians in the Institution: {value}";
+instPieSeries2.labels.template.text = "{category} Art Historians in the Institution: {value}";
 
 var instLabel = nested_pie.chartContainer.createChild(am4core.Label);
 instLabel.text = "German\nArchaeological\nInstitute";
@@ -960,6 +1176,7 @@ function inst_countries() {
         }
     }
 }
+
 
 
 
