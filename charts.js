@@ -826,52 +826,92 @@ var female_occ_chart = am4core.create("alt-occ-female", am4charts.XYChart);
 female_occ_chart.data = [
     {
         "gender": "female",
+
         "occupation": "University teacher",
+
+        "occupation": "university teacher",
+
         "number": 243
     },
     {
         "gender": "female",
+
         "occupation": "Writer",
+
+        "occupation": "writer",
+
         "number": 185
     },
     {
         "gender": "female",
+
         "occupation": "Exhibition curator",
+
+        "occupation": "exhibition curator",
+
         "number": 127
     },
     {
         "gender": "female",
+
         "occupation": "Curator",
+
+        "occupation": "curator",
+
         "number": 114
     },
     {
         "gender": "female",
+
         "occupation": "Archaeologist",
+
+        "occupation": "archaeologist",
+
         "number": 100
     },
     {
         "gender": "female",
+
         "occupation": "Historian",
+
+        "occupation": "historian",
+
         "number": 92
     },
     {
         "gender": "female",
+
         "occupation": "Art critic",
+
+        "occupation": "art critic",
+
         "number": 73
     },
     {
         "gender": "female",
+
         "occupation": "Architectural historian",
+
+        "occupation": "architectural historian",
+
         "number": 53
     },
     {
         "gender": "female",
+
         "occupation": "Translator",
+
+        "occupation": "translator",
+
         "number": 44
     },
     {
         "gender": "female",
+
         "occupation": "Journalist",
+
+        "occupation": "journalist",
+
         "number": 41
     },
     // {
@@ -930,52 +970,92 @@ var male_occ_chart = am4core.create("alt-occ-male", am4charts.XYChart);
 male_occ_chart.data = [
     {
         "gender": "male",
+
         "occupation": "University teacher",
+
+        "occupation": "university teacher",
+
         "number": 1356
     },
     {
         "gender": "male",
+
         "occupation": "Archaeologist",
+
+        "occupation": "archaeologist",
+
         "number": 759
     },
     {
         "gender": "male",
+
         "occupation": "Writer",
+
+        "occupation": "writer",
+
         "number": 653
     },
     {
         "gender": "male",
+
         "occupation": "Architectural historian",
+
+        "occupation": "architectural historian",
+
         "number": 458
     },
     {
         "gender": "male",
+
         "occupation": "Historian",
+
+        "occupation": "historian",
+
         "number": 398
     },
     {
         "gender": "male",
+
         "occupation": "Architect",
+
+        "occupation": "architect",
+
         "number": 344
     },
     {
         "gender": "male",
+
         "occupation": "Painter",
+
+        "occupation": "painter",
+
         "number": 280
     },
     {
         "gender": "male",
+
         "occupation": "Art critic",
+
+        "occupation": "art critic",
+
         "number": 280
     },
     {
         "gender": "male",
+
         "occupation": "Curator",
+
+        "occupation": "curator",
+
         "number": 252
     },
     {
         "gender": "male",
+
         "occupation": "Exhibition curator",
+
+        "occupation": "exhibition curator",
+
         "number": 207
     },
     // {
