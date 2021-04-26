@@ -43,6 +43,7 @@ animation-name: fadeInLeft;
 animation-duration: 2s;
 }
 
+
 .title {
 font-family: 'Gurmukhi', serif;
 font-size: 26px;
@@ -150,6 +151,23 @@ text-align:center;
 padding-top: 40px;
 }
 
+
+
+
+.content06 {
+margin-left: 0%;
+width: 100%;
+border: 1px solid red;
+height: 100vh;
+}
+
+.content07 {
+margin-left: 0%;
+width: 100%;
+height: 100vh;
+background-color: #e8cdda;
+}
+
 .intro p{
 text-align:center;
 font-family: 'Maison Neue';
@@ -175,16 +193,27 @@ margin-left:7%;
 
 .test {
   position: relative;
+  white-space:nowrap;
 }
 
 .test2 {
   position: relative;
+  white-space:nowrap;
 }
 
 .test3 {
   position: relative;
+  white-space:nowrap;
 }
 
+.test4 {
+  position: relative;
+  font-weight: bold;
+  white-space:nowrap;
+}
+.myunderlined2 {
+white-space:nowrap;
+}
 
 .test:after {
   opacity: 0;
@@ -234,6 +263,25 @@ margin-left:7%;
   top: 0;
   left: 0;
   background: linear-gradient(to top, #cccccc  70%, transparent 30%);
+  animation-name: highlight;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-delay: 2500ms;
+  animation-iteration-count: finite;
+
+  }
+  
+      .test4:after {
+  opacity: 0;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place the pseudo element right under the content */
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, #000000  10%, transparent 10%);
   animation-name: highlight;
   animation-duration: 4s;
   animation-fill-mode: forwards;
@@ -339,7 +387,40 @@ width: 4%;
 height: auto;
 margin-right:20%;
 margin-left:7%;
-display:none;
+opacity: 0;
+}
+
+.small-arrow1 {
+opacity: 0;
+}
+
+.small-arrow2 {
+opacity: 0;
+}
+
+.small-arrow3 {
+opacity: 0;
+}
+
+.small-arrow1 img{
+width: 4%;
+height: auto;
+margin-right:20%;
+margin-left:7%;
+}
+
+.small-arrow2 img{
+width: 4%;
+height: auto;
+margin-right:20%;
+margin-left:7%;
+}
+
+.small-arrow3 img{
+width: 4%;
+height: auto;
+margin-right:20%;
+margin-left:7%;
 }
 
 .smallarrow-single {
@@ -348,8 +429,19 @@ height: auto;
 margin-right:20%;
 margin-left:7%;
 }
+
+
+
 .second-arrow {
-display:none;
+opacity:0;
+}
+
+.second-arrow2 {
+opacity:0;
+}
+
+.third-arrow {
+opacity;0;
 }
 
 .small-text-section {
@@ -363,6 +455,11 @@ display: none;
 
 .text-section p.bottom-paragraph2 {
 margin-top:100px;
+display: none;
+}
+
+.text-section p.bottom-paragraph3 {
+margin-top:200px;
 display: none;
 }
 
@@ -414,6 +511,62 @@ opacity:0;
 opacity:0;
 }
 
+.final-text-section {
+margin-top: 30vh;
+
+}
+
+.final-text-section2 p{
+opacity: 0;
+}
+
+.final-text-section2 {
+margin-top: 40vh;
+margin-bottom: 70vh;
+}
+
+.final-text-section3 {
+margin-top: 40vh;
+margin-bottom: 70vh;
+}
+
+
+.final-text-section3 p{
+opacity: 0;
+}
+
+.before-scholarly-section {
+margin-bottom: 0px;
+margin-top: 60vh;
+}
+
+.arrow-group {
+margin-top: 150px;
+}
+
+.before-map-text-section {
+margin-top: 60vh;
+}
+
+.after-map-text-section {
+margin-top: 60vh;
+}
+
+.before-occupation-text-section {
+margin-top: 60vh;
+}
+
+.before-occupation-text-intro {
+opacity:0;
+}
+
+.before-map-text-intro {
+opacity:0;
+}
+.after-map-text-intro {
+opacity:0;
+}
+
 /* ----------------------------- opening matrioska ----------------------------- */
 
 .container-img2 {
@@ -426,6 +579,14 @@ opacity:0;
 }
 
 .container-img3 {
+    position: relative;
+    width:100%;
+    height:40vh;
+    margin-top:30px;
+	margin-bottom:30px;	
+}
+
+.container-img4 {
     position: relative;
     width:100%;
     height:40vh;
@@ -485,6 +646,28 @@ max-width:10%;
 
 }
 
+.text-section-pic8 {
+margin-top:30px;
+margin-bottom:30px;
+max-width:8%;
+
+}
+
+.text-section-pic9 {
+margin-top:30px;
+margin-bottom:30px;
+max-width:8%;
+
+}
+
+.before-chart-text-section {
+margin-bottom: 600px;
+}
+
+.before-chart-paragraph {
+margin-top:100px !important;
+}
+
 .text-section-pic-open{
 margin-top:0px;
 margin-bottom:29px;
@@ -541,6 +724,14 @@ position: relative;
 margin-top:140px;
 }
 
+.circles-container2 {
+width: 100%;
+height: 20vh;
+position: relative;
+margin-top:140px;
+display:none;
+}
+
 .circle-one img{
 	position: absolute;
 	top:0;
@@ -562,6 +753,28 @@ margin-top:140px;
 	left:45%;
 	max-width:12%;
 	
+}
+
+.circle-one2 img{
+	position: absolute;
+	top:0;
+	left:20%;
+	max-width:12%;
+	
+}
+
+.circle-two2 img{
+	position: absolute;
+	top:0;
+	left:70%;
+	max-width:12%;
+}
+
+.circle-one-plus2 img{
+	position: absolute;
+	top:0;
+	left:45%;
+	max-width:12%;	
 }
 
 .move-to-right {
@@ -593,6 +806,68 @@ margin-top:140px;
     }
 }
 
+
+.move-up {
+    position: relative;
+    -webkit-animation: moveUp 3s forwards 1 ease-out;
+    animation: moveUp 3s forwards 1 ease-out;
+}
+
+.move-up2 {
+    position: relative;
+    -webkit-animation: moveUpp 3s forwards 1 ease-out;
+    animation: moveUpp 3s forwards 1 ease-out;
+}
+
+.move-down {
+    position: relative;
+    -webkit-animation: moveDown 3s forwards 1 ease-out;
+    animation: moveDown 3s forwards 1 ease-out;
+}
+
+.entrance-down {
+    position: relative;
+    -webkit-animation: entranceDown 3s forwards 1 ease-out;
+    animation: entranceDown 3s forwards 1 ease-out;
+}
+
+@-webkit-keyframes moveUp {
+    0% {
+        top:0px;
+    }
+    100% {
+        top:-200px;
+    }
+}
+
+@-webkit-keyframes moveUpp {
+    0% {
+        top:200px;
+    }
+    100% {
+        top:0px;
+    }
+}
+
+
+@keyframes moveDown {
+    0% {
+        top:200px;
+    }
+    100% {
+        top:0px;
+    }
+}
+
+@keyframes entranceDown {
+    0% {
+        top:-100px;
+    }
+    100% {
+        top:0px;
+    }
+}
+
 .circles-text-second-p {
 opacity: 0;
 }
@@ -609,6 +884,22 @@ opacity: 0;
 margin-bottom: 80vh;
 }
 
+.before-mix-paragraph {
+display:none;
+z-index: 2000;
+}
+
+.empty-circle-two2 {
+position:relative;
+top:-200px;
+display: none;
+} 
+
+.empty-circle-one2 {
+position:relative;
+top:200px;
+display: none;
+}
 
 /* ----------------------------- 100 PICTOGRAMS CHART ----------------------------- */
 
@@ -631,6 +922,9 @@ text-align:center;
 .container .line img{
 width: 30px;
 }
+
+.line3 img {
+opacity:0;}
 
 .container img:hover{
   -webkit-filter: drop-shadow(2px 2px 2px #222);
@@ -694,6 +988,10 @@ text-align: center;
 
 .counter{
   font-weight: bold;
+	display: inline-block;
+	width:8%;
+
+
 }
 
 .bold-number{
@@ -704,13 +1002,7 @@ text-align: center;
     width: 50%;
 }
 
-/* ----------------------------- MAP CHART  ----------------------------- */
 
-#map-dist {
-  width:90%;
-  border: 1px solid #d9d9d9;
-  margin: 5%;	
-}
 
 /* ----------------------------- MAP LEGEND  ----------------------------- */
 .spaced-p {
@@ -726,20 +1018,36 @@ font-family: 'Maison Neue';
 text-transform: uppercase;
 letter-spacing: 0.20rem;
 font-size: 12px;
-margin-top: 10%;
+}
+
+.map-legend2 {
+letter-spacing: 0.23rem;
 }
 
 .map-legend-Title {
 margin-bottom: 10px;
-margin-top: 30px;
+margin-top: 10px;
+opacity:0;
 }
 
 .map-legend-bar {
 display:inline-block;
-width:80%;
+width:0%;
 height: 20px;
 margin:0;
 background: linear-gradient(90deg, rgba(211,232,229,1) 0%, rgba(175,196,194,1) 58%, rgba(109,136,134,1) 100%);
+    -webkit-transition: width 3s ease-in-out;
+    -moz-transition: width 3s ease-in-out;
+    -o-transition: width 3s ease-in-out;
+    transition: width 3s ease-in-out;
+}
+
+.map-legend-bar-fullwidth {
+width:80%;
+}
+
+.map-legend-bar-female {
+background: linear-gradient(90deg, rgba(240,226,232,1) 0%, rgba(232,205,218,1) 58%, rgba(186,141,180,1) 100%);
 }
 
 .map-legend-NumInitial {
@@ -748,6 +1056,9 @@ letter-spacing: 0.75rem;
 margin-top:4px;
 display:inline-block;
 float:left;
+position:relative;
+top: 10px;
+opacity:0;
 }
 
 .map-legend-NumFinal {
@@ -756,6 +1067,9 @@ letter-spacing: 0.75rem;
 margin-top:4px;
 display:inline-block;
 float:right;
+position:relative;
+top: 10px;
+opacity:0;
 }
 
 
@@ -817,56 +1131,49 @@ transition-duration: 0.4s;
   cursor: pointer;
 }
 
-
-
 /* ----------------------------- MAP CHART  ----------------------------- */
 
 #map-dist {
-  width:90%;
+  width:80%;
+  height:500px !important;
   border: 1px solid #d9d9d9;
   margin: 5%;	
+  opacity:0;
 }
 
-/* ----------------------------- MAP LEGEND  ----------------------------- */
+/* ----------------------------- OCCUPATION CHART  ----------------------------- */
 
-.map-legend {
-width:100%;
-text-align: center;
-font-family: 'Maison Neue';
-text-transform: uppercase;
-letter-spacing: 0.20rem;
-font-size: 12px;
-margin-top: 20%;
+.occupation-chart {
+margin-bottom: 20%;
 }
 
-.map-legend-Title {
-margin-bottom: 10px;
-margin-top: 30px;
+/* ----------------------------- ZOOM MATRIOSKA  ----------------------------- */
+.content06 {
+background-color: white;
+height: 300vh;
+z-index: -120;
+overflow-x: hidden;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
 }
 
-.map-legend-bar {
-display:inline-block;
-width:80%;
-height: 20px;
-margin:0;
-background: linear-gradient(90deg, rgba(211,232,229,1) 0%, rgba(175,196,194,1) 58%, rgba(109,136,134,1) 100%);
+.zoom-matrioska-section {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 40vh;
+
 }
 
-.map-legend-NumInitial {
-width:10%;
-letter-spacing: 0.75rem;
-margin-top:4px;
-display:inline-block;
-float:left;
+#zoom-matrioska {
+  width:1%;
+  transition: all 2s;
+   transform: scale(2); /* Change up to 200 for background effect */
 }
 
-.map-legend-NumFinal {
-width:10%;
-letter-spacing: 0.75rem;
-margin-top:4px;
-display:inline-block;
-float:right;
-}
+
+
+
 
 
 /* ----------------------------- CHARTS  BUTTON----------------------------- */
@@ -893,6 +1200,33 @@ float:right;
 #switch-btn:focus {
 	outline:0;
 }
+
+/* ----------------------------- OCCUPATION ICONS ----------------------------- */
+
+.occupation-icons {
+width:90%;
+height: 14vh;
+margin-bottom:20px;
+}
+
+.occupation-icon-1 {
+float:left;
+display:block;
+width:50%;
+height: 14vh;
+}
+
+.occupation-icon-2 {
+float:right;
+display:block;
+width:50%;
+height: 14vh;
+}
+
+.occupation-icon {
+width: 10%;
+margin-left:25%;}
+
 
 
 /* ----------------------------- RESPONSIVE DESIGN  ----------------------------- */
@@ -1006,3 +1340,4 @@ float:right;
 
 	
 }
+

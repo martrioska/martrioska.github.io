@@ -57,8 +57,8 @@ function checkVisible( elm, eval ) {
 
 $(window).on('scroll.scroll1',function() {
     if (checkVisible($('.line3'))) { 
-    $(".line3 img").hide().each(function(i) {
-  		$(this).delay(i*50).fadeIn(200);
+    $(".line3 img").each(function(i) {
+  		$(this).delay(i*50).fadeTo(200,1);
 		});
         $(window).off('scroll.scroll1');
     } else {
@@ -99,7 +99,7 @@ $(window).on('scroll.scroll2',function() {
 
 $(window).on('scroll.scroll7',function() {
     if (checkVisible($('.count-section2'))) { 
-		$('.count-section-text').delay(2000).fadeIn(2000);
+		$('.count-section-text').delay(1000).fadeIn(2000);
 		$(".count2").each(function () {
   $(this)
     .prop("Counter", 0)
@@ -126,8 +126,9 @@ $(window).on('scroll.scroll7',function() {
 
 $(window).on('scroll.scroll4',function() {
     if (checkVisible($('.after-arrow-p'))) { 
-		$('.text-section-pic').fadeTo(4000, 1);
-		$('.smallarrow').delay(4000).fadeIn(2000);
+		$('.text-section-pic').fadeTo(2000, 1);
+		$('.text-section-pic').addClass( "move-down" ); 
+		$('.small-arrow1').delay(4000).fadeTo(2000,1);
         $(window).off('scroll.scroll4');
     } else {
          // do nothing
@@ -136,9 +137,11 @@ $(window).on('scroll.scroll4',function() {
 
 $(window).on('scroll.scroll5',function() {
     if (checkVisible($('.after-arrow-p2'))) { 
-		$('.text-section-pic2').fadeTo(4000, 1);
-		$('.text-section-pic3').delay(3000).fadeTo(4000, 0.8);
-		$('.smallarrow').delay(4000).fadeIn(2000);
+   		$('.smallarrow').hide()
+		$('.text-section-pic2').fadeTo(2000, 1);
+		$('.text-section-pic2').addClass( "move-down" ); 
+		$('.text-section-pic3').delay(3000).fadeTo(2000, 0.8);
+		$('.small-arrow2').delay(3000).fadeTo(2000,1);
         $(window).off('scroll.scroll5');
     } else {
          // do nothing
@@ -150,6 +153,7 @@ $(window).on('scroll.scroll5',function() {
 $(window).on('scroll.scroll6',function() {
     if (checkVisible($('.double-text-section1'))) { 
 		$('.text-section-below').delay(2000).fadeIn(2000);
+		$('.text-section-below').addClass( "entrance-down" );
         $(window).off('scroll.scroll6');
     } else {
          // do nothing
@@ -159,7 +163,7 @@ $(window).on('scroll.scroll6',function() {
 $(window).on('scroll.scroll8',function() {
     if (checkVisible($('.text-section-start'))) { 
 		$('.bottom-paragraph').delay(2000).fadeIn(2000);
-		$('.smallarrow').hide().delay(4000).fadeIn(2000);
+		$('.small-arrow3').delay(4000).fadeTo(2000,1);
         $(window).off('scroll.scroll8');
     } else {
          // do nothing
@@ -169,8 +173,20 @@ $(window).on('scroll.scroll8',function() {
 $(window).on('scroll.scroll18',function() {
     if (checkVisible($('.text-section-initial'))) { 
 		$('.bottom-paragraph2').delay(1500).fadeIn(2000);
-		$('.second-arrow').delay(4000).fadeIn(2000);
+		$('.bottom-paragraph2').addClass( "entrance-down" );
+		$('.second-arrow2').delay(3000).fadeTo(2000,1);
         $(window).off('scroll.scroll18');
+    } else {
+         // do nothing
+    }
+});
+
+$(window).on('scroll.scroll23',function() {
+    if (checkVisible($('.text-section-final-two'))) { 
+		$('.bottom-paragraph3').delay(1500).fadeIn(2000);
+		$('.bottom-paragraph3').addClass( "entrance-down" );
+		$('.second-arrow').delay(4000).fadeTo(2000,1);
+        $(window).off('scroll.scroll23');
     } else {
          // do nothing
     }
@@ -191,12 +207,13 @@ $(window).on('scroll.scroll9',function() {
 
 // ----------- CASCADING APPEARING COUNTRIES -------------
 
-$(window).on('scroll.scroll15',function() {
+$(window).on('scroll.scroll22',function() {
     if (checkVisible($('.late-text-section'))) { 
 		$('.estonia-text, .slovenia-text').each(function(fadeInDiv) {
-     $(this).delay(fadeInDiv * 1000).fadeTo(4000, 1);
+     $(this).delay(fadeInDiv * 1000).fadeTo(3000, 1);
+	$(this).delay(fadeInDiv * 1000).addClass( "entrance-down" );
    });
-        $(window).off('scroll.scroll15');
+        $(window).off('scroll.scroll22');
     } else {
          // do nothing
     }
@@ -263,12 +280,33 @@ $(window).on('scroll.scroll14',function() {
     }
 });
 
+$(window).on('scroll.scroll15',function() {
+    if (checkVisible($('#alt-occ-female'))) { 
+        if ('flag' in female_occ_chart && !female_occ_chart['flag']) {
+            female_occ_chart.appear();
+            female_occ_chart.series.each(function(series) {
+                series.appear();
+            });
+            female_occ_chart['flag'] = true;
+            male_occ_chart.appear();
+            male_occ_chart.series.each(function(series) {
+                series.appear();
+            });
+        }
+    } else {
+         female_occ_chart['flag'] = false;
+    }
+});
+
+
 // ----------- CASCADING APPEARING FLAGS -------------
 
 $(window).on('scroll.scroll10',function() {
     if (checkVisible($('.after-image-flag2'))) { 
 		$('.flag-image1, .flag-image2, .flag-image3').each(function(fadeInDiv) {
      $(this).delay(fadeInDiv * 1000).fadeTo(4000, 1);
+     $(this).delay(fadeInDiv * 1000).addClass( "entrance-down" );
+     
    });
         $(window).off('scroll.scroll10');
     } else {
@@ -287,14 +325,36 @@ $(window).on('scroll.scroll17',function() {
     }
 });
 
+// ----------- OPENING MATRIOSKA 3 -------------
+
+$(window).on('scroll.scroll21',function() {
+    if (checkVisible($('.after-image-flag-smaller'))) { 
+		$('.text-section-pic9').delay(2000).last().addClass( "float" );
+        $(window).off('scroll.scroll21');
+    } else {
+         // do nothing
+    }
+});
+
 // ----------- CASCADING PARAGRAPHS + CIRCLES -------------
 
 $(window).on('scroll.scroll19',function() {
     if (checkVisible($('.circles-text-section'))) { 
 		$('.circles-text-second-p').delay(1000).fadeTo(3000,1);
 		$('.circles-container').delay(2000).fadeTo(3000,1);
-		$('.after-circles-flag').delay(3000).fadeTo(3000,1);
+		$('.after-circles-flag').delay(2000).fadeTo(3000,1);
         $(window).off('scroll.scroll19');
+    } else {
+         // do nothing
+    }
+});
+
+$(window).on('scroll.scroll26',function() {
+    if (checkVisible($('.before-mix-section'))) { 
+		$('.before-mix-paragraph').delay(1000).fadeTo(3000,1);
+		$('.circles-container2').delay(2000).fadeTo(3000,1);
+		$('.after-circles-flag2').delay(2000).fadeTo(3000,1);
+        $(window).off('scroll.scroll26');
     } else {
          // do nothing
     }
@@ -304,15 +364,127 @@ $(window).on('scroll.scroll19',function() {
 
 $(window).on('scroll.scroll20',function() {
     if (checkVisible($('.after-circles-flag'))) { 
-		$('.circle-full-image').delay(5000).fadeOut(3000);
-		$('.circle-full-plus').delay(8000).fadeOut(3000);
+		$('.circle-full-image').delay(6000).fadeOut(3000);
+		$('.circle-full-plus').delay(9000).fadeOut(3000);
 		setTimeout(function(){
 		$('.empty-circle-one').addClass( "move-to-right" );
-		$('.empty-circle-two').addClass( "move-to-left" );
-       
-   }, 8000);
+		$('.empty-circle-two').addClass( "move-to-left" );      
+   }, 10000);
 		
         $(window).off('scroll.scroll20');
+    } else {
+         // do nothing
+    }
+});
+
+
+
+$(window).on('scroll.scroll25',function() {
+    if (checkVisible($('.after-circles-flag2'))) { 
+		$('.circle-full-image2').delay(8000).fadeOut(3000);		
+		setTimeout(function(){
+     	$('.circle-full-image2').addClass( "move-up" ); 
+   }, 8000);
+		setTimeout(function(){
+		$('.empty-circle-one2').fadeIn(3000);
+		$('.empty-circle-two2').fadeIn(3000);
+		$('.empty-circle-one2').addClass( "move-up2" );
+		$('.empty-circle-two2').addClass( "move-up2" );      
+   }, 9000);
+		
+        $(window).off('scroll.scroll25');
+    } else {
+         // do nothing
+    }
+});
+
+
+// ----------------- MAP GRADIENT BAR -------------
+
+$(window).on('scroll.scroll27',function() {
+    if (checkVisible($('.map-section'))) { 
+    	$('.map-legend-bar').addClass( "map-legend-bar-fullwidth" ); 		
+	setTimeout(function(){
+     	$('.map-legend-Title').fadeTo(3000,1);
+     	$('.map-legend-NumInitial').fadeTo(3000,1);
+     	$('.map-legend-NumFinal').fadeTo(3000,1);
+     	$('#map-dist').fadeTo(3000,1);
+   }, 3000);
+		
+        $(window).off('scroll.scroll27');
+    } else {
+         // do nothing
+    }
+});
+
+// ----------------- FINAL PARAGRAPHS CONTENT 4 -------------
+
+$(window).on('scroll.scroll28',function() {
+    if (checkVisible($('.final-text-section2'))) { 
+    	$('.final-text-section2 p').fadeTo(3000,1);
+    	$('.final-text-section2 p').addClass( "entrance-down" );
+    	setTimeout(function(){
+     	$('.myunderlined1').addClass( "test4" );
+   }, 3000);
+    	
+        $(window).off('scroll.scroll28');
+    } else {
+         // do nothing
+    }
+});
+
+$(window).on('scroll.scroll29',function() {
+    if (checkVisible($('.final-text-section3'))) { 
+    	$('.final-text-section3 p').fadeTo(3000,1);
+    	$('.final-text-section3 p').addClass( "entrance-down" );
+    	setTimeout(function(){
+     	$('.myunderlined2').addClass( "test4" );
+   }, 3000);
+        $(window).off('scroll.scroll29');
+    } else {
+         // do nothing
+    }
+});
+
+// ----------------- MAP INTRO AND OUTRO -------------
+
+$(window).on('scroll.scroll29',function() {
+    if (checkVisible($('.before-map-text-section'))) { 
+    	$('.before-map-text-intro').fadeTo(3000,1);
+    	$('.before-map-text-intro').addClass( "entrance-down" );
+        $(window).off('scroll.scroll29');
+    } else {
+         // do nothing
+    }
+});
+
+$(window).on('scroll.scroll30',function() {
+    if (checkVisible($('.after-map-text-section'))) { 
+    	$('.after-map-text-intro').fadeTo(3000,1);
+    	$('.after-map-text-intro').addClass( "entrance-down" );
+        $(window).off('scroll.scroll30');
+    } else {
+         // do nothing
+    }
+});
+
+// ----------------- OCCUPATION INTRO AND OUTRO -------------
+
+$(window).on('scroll.scroll32',function() {
+    if (checkVisible($('.before-occupation-text-section'))) { 
+    	$('.before-occupation-text-intro').fadeTo(3000,1);
+    	$('.before-occupation-text-intro').addClass( "entrance-down" );
+        $(window).off('scroll.scroll32');
+    } else {
+         // do nothing
+    }
+});
+
+
+$(window).on('scroll.scroll31',function() {
+    if (checkVisible($('.before-occupation-circle'))) { 
+    	$('.myselectcountry').addClass( "test4" );
+        $(window).off('scroll.scroll31');
     } else {
          // do nothing
     }
@@ -494,4 +666,7 @@ function changeImageFive() {
     image.src = "svg/closedmtr.svg";
     }
 }
+
+
+// ----------- ZOOM IN MATRIOSKA PINK EFFECT -------------
 
