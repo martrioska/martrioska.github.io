@@ -803,7 +803,10 @@ function switch_sw_col1() {
         sw2_valueAxis.strictMinMax = true;
         sw_col1.appear();
         sw_col2.appear();
-        document.getElementById("switch-btn").firstChild.data ="Switch to Normal View";
+        btns = document.getElementsByClassName("switch-btn")
+        for (var i = 0; i < btns.length; i++) {
+           btns.item(i).firstChild.data ="Switch to Normal View";
+        }
     }
     else if (sw_col1.flag === 'proporional') {
         sw_col1.data = historian_data['normal'];
@@ -814,7 +817,10 @@ function switch_sw_col1() {
         sw2_valueAxis.strictMinMax = false;
         sw_col1.appear();
         sw_col2.appear();
-        document.getElementById("switch-btn").firstChild.data ="Switch to Proporional View";
+        btns = document.getElementsByClassName("switch-btn")
+        for (var i = 0; i < btns.length; i++) {
+           btns.item(i).firstChild.data ="Switch to Proporional View";
+        }
     }
 }
 
