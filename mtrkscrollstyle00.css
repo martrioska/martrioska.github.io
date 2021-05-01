@@ -8,6 +8,18 @@
   src: url(fonts/GurmukhiMN-01.ttf);
 }
 
+@font-face {
+  font-family: 'Typewrite';
+  src: url(fonts/Typewrite.ttf);
+}
+
+@font-face {
+  font-family: 'TypewriteSmall';
+  src: url(fonts/AlbertsthalTypewriter.ttf);
+}
+
+
+
 
 body {
 color: white;
@@ -27,8 +39,13 @@ height:40px;
 top:0;
 border-bottom: 0.5px solid black;
 color: black;
-z-index: 3;
+z-index: 300;
 background-color: white;
+transition: background-color 2s;
+}
+
+.mtrk-header-pink {
+background-color: #e8cdda !important;
 }
 
 .mtrk-sidebar {
@@ -41,6 +58,7 @@ margin-left: 20px;
 text-align: center;
 animation-name: fadeInLeft;
 animation-duration: 2s;
+z-index:100;
 }
 
 
@@ -154,18 +172,29 @@ padding-top: 40px;
 
 
 
-.content06 {
-margin-left: 0%;
-width: 100%;
-border: 1px solid red;
-height: 100vh;
-}
 
 .content07 {
+display: block;
 margin-left: 0%;
 width: 100%;
-height: 100vh;
+height:100%;
 background-color: #e8cdda;
+z-index: 90000;
+}
+
+.content07-innercontent {
+
+font-family: 'Maison Neue';
+display: block;
+opacity:1;
+margin-left: 10%;
+width:80%;
+color: black;
+z-index: 1;
+text-align: justify;
+text-justify: inter-word;
+text-align:center;
+padding-top: 40px;
 }
 
 .intro p{
@@ -210,6 +239,11 @@ margin-left:7%;
   position: relative;
   font-weight: bold;
   white-space:nowrap;
+}
+
+.test4-link {
+color: black;
+text-decoration: none;
 }
 .myunderlined2 {
 white-space:nowrap;
@@ -441,7 +475,7 @@ opacity:0;
 }
 
 .third-arrow {
-opacity;0;
+opacity:0;
 }
 
 .small-text-section {
@@ -498,6 +532,12 @@ margin-top: 150px;
 display:none;
 margin-top: 100px;
 }
+.count-section-text3 {
+opacity:0;
+margin-top: 60px;
+margin-bottom: 200px;
+
+}
 
 .late-text-section {
 margin-top: 200px;
@@ -531,7 +571,8 @@ margin-bottom: 70vh;
 }
 
 
-.final-text-section3 p{
+.final-text-section3-p {
+margin-top:100px !important;
 opacity: 0;
 }
 
@@ -868,6 +909,37 @@ display:none;
     }
 }
 
+/* ----------------------------- MOVE SIDEBAR ----------------------------- */
+
+.move_left {
+    -webkit-animation: movetoLeft 2s forwards 1 ease-out;
+    animation: movetoLeft 2s forwards 1 ease-out;
+}
+
+@-webkit-keyframes movetoLeft {
+    0% {
+        left:0px;
+    }
+    100% {
+        left:-100px;
+    }
+} 
+
+.move_back {
+    -webkit-animation: moveBack 2s forwards 1 ease-out;
+    animation: moveBack 2s forwards 1 ease-out;
+}
+
+@-webkit-keyframes moveBack {
+    0% {
+        left:-100px;
+    }
+    100% {
+        left:0px;
+    }
+}  
+
+
 .circles-text-second-p {
 opacity: 0;
 }
@@ -901,6 +973,8 @@ top:200px;
 display: none;
 }
 
+
+
 /* ----------------------------- 100 PICTOGRAMS CHART ----------------------------- */
 
 .pictchart {
@@ -919,14 +993,40 @@ float:left;
 text-align:center;
 }
 
+.container-small {
+height: 50%;
+width: 50%;
+margin-left:25%;
+display:inline;
+float:left;
+text-align:center;
+}
+
+.second-pictchart {
+width: 100%;
+height: 40vh !important;
+}
+
 .container .line img{
 width: 30px;
+}
+
+.container-small .line img{
+width: 40px;
 }
 
 .line3 img {
 opacity:0;}
 
 .container img:hover{
+  -webkit-filter: drop-shadow(2px 2px 2px #222);
+  filter: drop-shadow(2px 2px 2px #222);
+  position: relative;
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  z-index: 4;
+}   
+
+.container-small img:hover{
   -webkit-filter: drop-shadow(2px 2px 2px #222);
   filter: drop-shadow(2px 2px 2px #222);
   position: relative;
@@ -965,6 +1065,308 @@ img:hover + .hide {
   z-index: 5;
 }
 
+/* ----------------------------- DICT SECTION ----------------------------- */
+.text-section-dict {
+height: 250vh;
+}
+.dict-section {
+border: 1px solid black;
+text-align:left;
+height: 40vh;
+width:50%;
+margin: 25%;
+padding: 30px;
+box-shadow: 5px 5px black;
+position: -webkit-sticky; /* Safari */
+position: sticky;
+top: 30vh;
+}
+
+.linedict {
+border-top: 1px solid black;
+height:30px;
+}
+.dict-section p.lastp {
+}
+
+.dict-section p.secondp {
+margin-bottom: 30px;
+}
+.personal-name {
+transition: font-size 4s;
+}
+.personal-name-big {
+font-size: 30px;
+}
+.pronunciation {
+font-size: 15px;}
+
+.text-disappear4 {
+opacity:1;
+} 
+
+.text-disappear3 {
+opacity:1;
+}  
+.text-disappear2 {
+opacity:1;
+}
+.text-disappear1 {
+opacity:1;
+}
+.after-dict-flag {
+bottom: 100vh;
+}
+
+/* ----------------------------- PORTRAIT GALLERY ----------------------------- */
+
+
+.content07-gallerycontent {
+background-color: #e8cdda;
+height: 100%;
+font-family: 'Maison Neue';
+display: block;
+opacity:1;
+margin-left: 5%;
+width:90%;
+margin-left:6%;
+color: black;
+z-index: 1;
+text-align: justify;
+text-justify: inter-word;
+text-align:center;
+padding-top: 40px;
+}
+
+.portrait-gallery {
+height: 300vh;
+}
+
+.portrait-card {
+display:inline;
+float:left;
+width: 42%;
+margin-left:3%;
+margin-bottom: 5%;
+height:300px;
+border: 1px solid black;
+text-align:left;
+padding: 20px;
+box-shadow: 5px 5px black;
+position: relative;
+}
+
+.portrait-photo {
+max-width:40%;
+border: 8px solid #d9bdcc;
+}
+.card-info {
+display:inline;
+float:right;
+width:50%;
+height:95%;
+}
+
+.visibility-info-container {
+overflow:auto;
+height:55%;
+border-top: 1px solid black;
+}
+.card-info h1{
+
+margin-bottom:0;
+}
+.card-info h2{
+font-style: italic;
+font-size:15px;
+font-weight: bold;
+padding-bottom:5px;
+margin-bottom:20px;
+margin-top:2px;
+}
+
+.card-number {
+float:right;
+position:relative;
+width:2%;
+bottom:10px;
+right:10px;
+}
+
+.visibility-info {
+border-bottom: 1px solid black;
+padding-bottom: 12px;
+padding-top: 12px;
+margin:0;
+}
+
+.visibility-info-occupation {
+padding-top: 17px !important;
+padding-bottom:17px !important;}
+
+.visibility-category {
+font-size:16px !important;
+font-weight: bold !important;
+}
+
+.portrait-card-luisa::before{
+	position: absolute;
+    content: url('portraits/clip.svg');
+    width: 5%;
+    top:-3%;
+    left:6%;
+	z-index:200;
+}
+
+.portrait-card-pin::before{
+	position: absolute;
+    content: url('portraits/pin.svg');
+    width: 15%;
+    left:-1px;
+    top:-2px;
+}
+.portrait-card-pin {
+}
+
+.portrait-card-rotated {
+transform: rotate(3deg);
+}
+
+.portrait-card-rotated::before{
+	position: absolute;
+    content: url('portraits/tape.svg');
+    width: 50%;
+    margin-left: 25%;
+     transform: translateY(-62%);
+}
+
+.portrait-card-rotated::after{
+	position: absolute;
+    content: url('portraits/tape.svg');
+    width: 50%;
+    margin-left: -15%;
+    transform: translateY(55%);
+    bottom:0;
+}
+
+.portrait-card-luisa {
+position: relative;
+}
+
+.collector-badge {
+border: 1px solid black;
+position: absolute;
+text-align:right;
+line-height: 20px;
+padding:6px;
+padding-left:46px;
+padding-right:26px;
+border-style: dashed ;
+background-color: #e8cdda;
+top: -4%;
+left:2%;
+z-index:100;
+width:auto;
+transform: rotate(-5deg);
+}
+.collector-badge a {
+color: black;
+font-family: 'Maison Neue';
+text-decoration:none;
+}
+
+.collector-badge2 {
+border: 1px solid #e60000;
+position: absolute;
+text-align:center;
+line-height: 20px;
+padding:6px;
+background-color: #e8cdda;
+top: 2%;
+right:2%;
+
+}
+
+.collector-badge2 a {
+color: #e60000;
+font-family: 'Maison Neue';
+text-decoration:none;
+
+}
+
+.statement-bold {
+opacity:0;
+}
+
+
+
+.count-section3 {
+margin-bottom:60%;
+}
+
+.text-section-gallery {
+width:80%;
+margin-left:10%;
+margin-bottom:15%;
+}
+
+.text-section-gallery p{
+margin-top:30px;
+margin-bottom:40px;
+text-align:center;
+font-family: 'Maison Neue';
+font-size: 30px;
+}
+
+/* ----------------------------- FONDAZIONE ZERI  ----------------------------- */
+.zeri-images-container {
+margin-top: 120px;
+margin-bottom: 50px;
+}
+
+.zeri-images-container img{
+max-width: 14%;
+margin:0;
+}
+
+/* ----------------------------- DOWNLOAD CONTAINER  ----------------------------- */
+.download-container {
+margin-top: 120px;
+margin-bottom: 30vh;
+}
+
+.download-container img{
+max-width: 16%;
+margin-right:10%;
+margin-left:10%;
+}
+
+
+/* ----------------------------- FINAL PART TEXTS  ----------------------------- */
+.text-section-big p{
+font-size: 40px !important;
+padding-bottom: 50px;
+}
+
+.text-section-big {
+padding-bottom: 200px;
+margin-bottom:0;
+}
+
+.name-highlight {
+font-style: italic;
+}
+
+.content07-footer {
+border-top: 1px solid black;
+width:100%;
+height:25vh;
+background-color: #e8cdda;
+margin-bottom:0;
+z-index:700;
+position: absolute;
+}
+
 /* ----------------------------- COUNTING NUMBER  ----------------------------- */
 
 
@@ -973,7 +1375,8 @@ text-align: center;
     font-family: 'Maison Neue';
     font-size: 30px;
     margin-right: 7%;
-    margin-left: 7%;}
+    margin-left: 7%;
+    }
 
 .content02 p {
 text-align: center;
@@ -990,8 +1393,12 @@ text-align: center;
   font-weight: bold;
 	display: inline-block;
 	width:8%;
+}
 
-
+.counter3{
+  font-weight: bold;
+	display: inline-block;
+	width:4%;
 }
 
 .bold-number{
@@ -1149,26 +1556,22 @@ margin-bottom: 20%;
 
 /* ----------------------------- ZOOM MATRIOSKA  ----------------------------- */
 .content06 {
-background-color: red;
-height: 300vh;
-z-index: -120;
-overflow-x: hidden;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
+margin-left: 0%;
+background-color: transparent;
+width: 100%;
+height: 200vh;
+z-index: -120; 
+overflow:hidden;
 }
 
-.zoom-matrioska-section {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 40vh;
-
-}
 
 #zoom-matrioska {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 30vh;
   width:1%;
-  transition: all 2s;
-   transform: scale(2); /* Change up to 200 for background effect */
+  transform: scale(2); /* Change up to 200 for background effect */
+  z-index: -100;
 }
 
 
@@ -1258,7 +1661,7 @@ margin-left:25%;}
 	top:auto;
 	left:0;
 	margin-left: 0px;
-	text-align: cente1;
+	text-align: center;
 	animation-name: fadeInLeft;
 	animation-duration: 2s;
 	background-color:white;
@@ -1329,6 +1732,10 @@ margin-left:25%;}
 	}
 	
 	.container .line img{	
+        width: 20px;
+        }
+        
+    .container-small .line img{	
         width: 20px;
         }
         
