@@ -1095,7 +1095,7 @@ top: 30vh;
 
 .linedict {
 border-top: 1px solid black;
-height:30px;
+height:2%;
 }
 .dict-section p.lastp {
 }
@@ -1537,13 +1537,13 @@ text-align: center;
 .counter{
   font-weight: bold;
 	display: inline-block;
-	width:8%;
+	width:10%;
 }
 
 .counter3{
   font-weight: bold;
 	display: inline-block;
-	width:4%;
+	width:5%;
 }
 
 .bold-number{
@@ -1826,7 +1826,46 @@ opacity:1;
 
 /* ----------------------------- RESPONSIVE DESIGN  ----------------------------- */
 
+@media screen and (max-width: 1100px) {
+	.dict-section {
+	width:60%;
+	margin-right: 20%;
+	margin-left:20%;
+	}
+	.linedict {
+	height:0px;
+	}
+
+	.portrait-card {
+	width: 70%;
+	margin-left:15%;
+	}
+
+	.counter{
+	width:20%;
+	}
+
+	#alt-block-container
+	{
+  	width: 90%;
+    display: block !important;
+    justify-content: none;
+	}
+
+	#alt-occ-male, #alt-occ-female {
+ 	 width: 100%;
+ 	 height: 500px;
+	}
+		.occupation-icons {
+	display: none;
+	}
+	
+}
+
+
 @media screen and (max-width: 800px) {
+	
+
 
 	.intro p{
 	text-align:center;
@@ -1835,6 +1874,12 @@ opacity:1;
 	margin-right:20%;
 	margin-left:7%;
 	display:none;
+	}
+	
+	.text-section p{
+
+	font-size: 20px;
+
 	}
 
 	.right-bar a {
@@ -1931,12 +1976,62 @@ opacity:1;
         width: 20px;
         }
         
-
-
-}
-
-@media screen and (max-width: 600px) {
-
+		.dict-section {
+	width:90%;
+	margin-left: 0%;
+	}
 	
+	.text-disappear2 p {
+	font-size: 13px;
+	}
+	
+	.text-disappear3 {
+	font-size: 13px;
+	}
+	.text-disappear4 {
+	font-size: 13px;
+	}
+	.personal-name {
+	font-size: 13px;
+	}
+	
+	.portrait-card {
+	width: 70%;
+	margin-left:10%;
+	}
+	
+	.counter{
+	width:30%;
+	}
+	.counter3{
+
+	width:15%;
+	}
+	
+		.test {
+  position: relative;
+  white-space: normal;
+	}
+
+	.test2 {
+  position: relative;
+  white-space: normal;
+	}
+
+	.test3 {
+  position: relative;
+  white-space: normal;
+	}
+
+	.test4 {
+  position: relative;
+  font-weight: bold;
+  white-space: normal;
+	}
+	
+
+
 }
+
+
 
