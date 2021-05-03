@@ -706,9 +706,6 @@ max-width:8%;
 
 }
 
-.before-chart-text-section {
-margin-bottom: 600px;
-}
 
 .before-chart-paragraph {
 margin-top:100px !important;
@@ -1093,6 +1090,10 @@ position: sticky;
 top: 30vh;
 }
 
+.special-paragraph {
+margin-top:30vh !important;
+}
+
 .linedict {
 border-top: 1px solid black;
 height:2%;
@@ -1338,8 +1339,6 @@ height:20vh;
 display:inline-block;
 }
 
-.final-line-div {
-margin-top:60px !important;}
 
 .line-div-big {
 width:100%;
