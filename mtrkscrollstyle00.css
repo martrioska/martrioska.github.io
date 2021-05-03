@@ -1024,6 +1024,9 @@ width: 40px;
 .line3 img {
 opacity:0;}
 
+.line4 img {
+opacity:0;}
+
 .container img:hover{
   -webkit-filter: drop-shadow(2px 2px 2px #222);
   filter: drop-shadow(2px 2px 2px #222);
@@ -1123,7 +1126,8 @@ opacity:1;
 opacity:1;
 }
 .after-dict-flag {
-bottom: 100vh;
+position:relative;
+bottom: -500px;
 }
 
 /* ----------------------------- PORTRAIT GALLERY ----------------------------- */
@@ -1386,6 +1390,7 @@ width: 48% !important;
 height:100%;
 display: inline;
 float: left;
+opacity:0;
 }
 
 .download-2 {
@@ -1396,6 +1401,7 @@ height:100%;
 float: right;
 display: inline;
 border-left: 1px solid black;
+opacity:0;
 }
 
 .download-1 a {
@@ -1769,7 +1775,54 @@ height: 14vh;
 width: 10%;
 margin-left:25%;}
 
+/* ----------------------------- ARTCHIVES ANIMATIONS ----------------------------- */
 
+.artchives-paragraph2 {
+opacity: 0;
+}
+.artchives-paragraph3 {
+opacity: 0;
+}
+
+.zeri-image1 {
+opacity: 0;
+}
+
+.zeri-image2 {
+opacity: 0;
+}
+
+.zeri-image3 {
+opacity: 0;
+}
+
+.zeri-image4 {
+opacity: 0;
+}
+
+.zeri-image5 {
+opacity: 0;
+}
+
+.after-second-pictchart {
+opacity: 0;
+}
+
+.question2 {
+opacity: 0;
+}
+
+.portrait-card {
+opacity:0;
+}
+
+.portrait-card-1 {
+opacity:1;
+}
+
+.portrait-card-2 {
+opacity:1;
+}
 
 /* ----------------------------- RESPONSIVE DESIGN  ----------------------------- */
 

@@ -516,6 +516,127 @@ $(window).on('scroll.scroll31',function() {
     }
 });
 
+// ----------------- ARTCHIVES ANIMATIONS -------------
+
+$(window).on('scroll.scroll40',function() {
+    if (checkVisible($('.artchives-paragraph1'))) { 
+    	$('.artchives-paragraph2').delay(1000).fadeTo(3000,1);
+    	$('.artchives-paragraph3').delay(4000).fadeTo(3000,1);
+    	$('.artchives-paragraph2').addClass( "entrance-down" );
+    	setTimeout(function(){
+     	$('.artchives-paragraph3').addClass( "entrance-down" );
+   },4000);
+      	setTimeout(function(){
+      	$('.zeri-image1').fadeTo(3000,1);
+      	$('.zeri-image1').addClass( "entrance-down" );
+    	$('.zeri-image2').delay(2000).fadeTo(3000,1);
+    	$('.zeri-image3').delay(2500).fadeTo(3000,1);
+    	$('.zeri-image4').delay(3000).fadeTo(3000,1);
+    	$('.zeri-image5').delay(4500).fadeTo(3000,1);
+   },5000);
+        setTimeout(function(){
+      	$('.zeri-image3').addClass( "entrance-down" );
+   },6000);
+           setTimeout(function(){
+      	$('.zeri-image5').addClass( "entrance-down" );
+   },8000);
+        $(window).off('scroll.scroll40');
+    } else {
+         // do nothing
+    }
+});
+
+// ----------------- SECOND PICTOGRAMS CHART-------------
+
+$(window).on('scroll.scroll41',function() {
+    if (checkVisible($('.before-second-pictchart'))) { 
+    setTimeout(function(){
+      	$(".line4 img").each(function(i) {
+  		$(this).delay(i*70).fadeTo(300,1);
+		});
+   },1000);
+   	$('.after-second-pictchart').delay(2000).fadeTo(3000,1);
+   	$('.after-second-pictchart').addClass( "entrance-down" );	
+        $(window).off('scroll.scroll41');
+    } else {
+         // do nothing
+    }
+});
+
+$(window).on('scroll.scroll42',function() {
+    if (checkVisible($('.question1'))) { 
+   	$('.question2').delay(2000).fadeTo(3000,1);
+   	$('.question2').addClass( "entrance-down" );	
+        $(window).off('scroll.scroll42');
+    } else {
+         // do nothing
+    }
+});
+
+// ----------------- PORTRAIT GALLERY -------------
+
+$(window).on('scroll.scroll43',function() {
+    if (checkVisible($('.portrait-card-3'))) { 
+    $('.portrait-card-3').delay(700).fadeTo(3000,1);
+   	$('.portrait-card-3').addClass( "entrance-down" );
+    $('.portrait-card-4').delay(700).fadeTo(3000,1);
+   	$('.portrait-card-4').addClass( "entrance-down" );
+        $(window).off('scroll.scroll43');
+    } else {
+         // do nothing
+    }
+});
+
+$(window).on('scroll.scroll44',function() {
+    if (checkVisible($('.portrait-card-5'))) { 
+    $('.portrait-card-5').delay(700).fadeTo(3000,1);
+   	$('.portrait-card-5').addClass( "entrance-down" );
+    $('.portrait-card-6').delay(700).fadeTo(3000,1);
+   	$('.portrait-card-6').addClass( "entrance-down" );
+        $(window).off('scroll.scroll44');
+    } else {
+         // do nothing
+    }
+});
+
+$(window).on('scroll.scroll45',function() {
+    if (checkVisible($('.portrait-card-7'))) { 
+    $('.portrait-card-7').delay(700).fadeTo(3000,1);
+   	$('.portrait-card-7').addClass( "entrance-down" );
+    $('.portrait-card-8').delay(700).fadeTo(3000,1);
+   	$('.portrait-card-8').addClass( "entrance-down" );
+        $(window).off('scroll.scroll45');
+    } else {
+         // do nothing
+    }
+});
+
+$(window).on('scroll.scroll46',function() {
+    if (checkVisible($('.portrait-card-9'))) { 
+    $('.portrait-card-9').delay(700).fadeTo(3000,1);
+   	$('.portrait-card-9').addClass( "entrance-down" );
+    $('.portrait-card-10').delay(700).fadeTo(3000,1);
+   	$('.portrait-card-10').addClass( "entrance-down" );
+        $(window).off('scroll.scroll46');
+    } else {
+         // do nothing
+    }
+});
+
+// ----------------- DOWNLOAD IMAGES -------------
+
+$(window).on('scroll.scroll47',function() {
+    if (checkVisible($('.download-section'))) { 
+    $('.download-1').delay(1000).fadeTo(3000,1);
+   	$('.download-1').addClass( "entrance-down" );
+    $('.download-2').delay(1000).fadeTo(3000,1);
+   	$('.download-2').addClass( "entrance-down" );
+        $(window).off('scroll.scroll47');
+    } else {
+         // do nothing
+    }
+});
+
 
 // ----------- SCROLL MAIN BAR FUNCTIONS -------------
 
