@@ -1,4 +1,6 @@
-+// ----------- PAGE TRANSISITION -------------
+
+
+// ----------- PAGE TRANSISITION -------------
 
 window.scroll(0, 0)
 
@@ -68,85 +70,7 @@ $(window).on('scroll.scroll1',function() {
 
 
 
-// ----------- COUNTER -----------------
 
-$(window).on('scroll.scroll2',function() {
-    if (checkVisible($('.count-section1'))) { 
-	$(".count").each(function () {
-  $(this)
-    .prop("Counter", 0)
-    .animate(
-      {
-        Counter: $(this).text()
-      },
-      {
-        duration: 1600,
-        easing: "swing",
-        step: function (now) {
-          $(this).text(Math.ceil(now));
-        }
-      }
-    );
-});
-        $(window).off('scroll.scroll2');
-    } else {
-         // do nothing
-    }
-});
-
-
-
-
-$(window).on('scroll.scroll7',function() {
-    if (checkVisible($('.count-section2'))) { 
-		$('.count-section-text').delay(1000).fadeIn(2000);
-		$(".count2").each(function () {
-  $(this)
-    .prop("Counter", 0)
-    .animate(
-      {
-        Counter: $(this).text()
-      },
-      {
-        duration: 3000,
-        easing: "swing",
-        step: function (now) {
-          $(this).text(Math.ceil(now));
-        }
-      }
-    );
-});
-        $(window).off('scroll.scroll7');
-    } else {
-         // do nothing
-    }
-});
-
-$(window).on('scroll.scroll39',function() {
-    if (checkVisible($('.count-section3'))) { 
-		$('.count-section-text3').delay(1000).fadeTo(2000,1);
-		$('.statement-bold').delay(2500).fadeTo(2000,1);
-		$(".count3").each(function () {
-  $(this)
-    .prop("Counter", 0)
-    .animate(
-      {
-        Counter: $(this).text()
-      },
-      {
-        duration: 3000,
-        easing: "swing",
-        step: function (now) {
-          $(this).text(Math.ceil(now));
-        }
-      }
-    );
-});
-        $(window).off('scroll.scroll39');
-    } else {
-         // do nothing
-    }
-});
 
 // ----------- FADE IN MATRIOSKA -------------
 
