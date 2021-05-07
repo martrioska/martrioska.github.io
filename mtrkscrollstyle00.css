@@ -1161,7 +1161,6 @@ float:left;
 width: 42%;
 margin-left:3%;
 margin-bottom: 5%;
-height:36vh;
 border: 1px solid black;
 text-align:left;
 padding: 20px;
@@ -1182,7 +1181,7 @@ height:95%;
 
 .visibility-info-container {
 overflow:auto;
-height:55%;
+height:200px;
 border-top: 1px solid black;
 }
 .card-info h1{
