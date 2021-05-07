@@ -3,9 +3,9 @@
 
 
 Check the [website](https://martrioska.github.io/) of the project.  
-Check the [jupyter notebook](https://mybinder.org/v2/git/https%3A%2F%2Fgithub.com%2Fmartrioska%2Fmartrioska.github.io/c2e6e93f95237c63d4efe889c1afdc19ab9819b3) of the project.
+Check the [jupyter notebook](https://mybinder.org/v2/gh/martrioska/martrioska.github.io/92b47dbc2004197edf702463bab22f9f8313295d) of the project.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/martrioska/martrioska.github.io/HEAD?urlpath=https%3A%2F%2Fgithub.com%2Fmartrioska%2Fmartrioska.github.io%2Fblob%2Fmain%2Fmartrioska.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/martrioska/martrioska.github.io/92b47dbc2004197edf702463bab22f9f8313295d)
 
 ## Abstract
 Women art historians have often remained unseen among the numerous layers of intellectual contributions constructing the field of art history. The image of the matryoshka conjures up the unwrapping of layers, uncovering what is underneath, what is inside. Peeling away the layers in the attempt of revealing the role of women in art history is the aim of this data-driven project that has been carried out for the exam of [Electronic Publishing and Digital Storytelling](https://www.unibo.it/it/didattica/insegnamenti/insegnamento/2020/443749) held by Professor Marilena Daquino, within the Digital Humanities and Digital Knowledge course at the University of Bologna.
