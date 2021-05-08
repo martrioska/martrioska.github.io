@@ -1,3 +1,162 @@
+//---------- 100 PICTOGRAMS CHARTS---------
+
+json_percList = {
+    "female": 31,
+    "male": 69,
+    "non-binary": 0
+}
+
+json_artchives_tot = {
+    "female": 1,
+    "male": 25
+}
+
+
+$( document ).ready(function() {
+	 var femaleNumber = json_percList["female"]
+     $('.line3').children().slice(femaleNumber*2).attr('src','svg/matrioska2.svg'); // green
+});
+
+
+$( document ).ready(function() {
+	 var femaleNumber = json_artchives_tot["female"]
+     $('.line4').children().slice(femaleNumber*2).attr('src','svg/matrioska2.svg'); // green
+});
+
+
+//---------- COUNTER FILL --------
+
+json_artHistorians = {
+    "tot": "15303",
+    "male": "10514",
+    "female": "4787",
+    "non-binary": "2"
+}
+
+json_artchives_classes = {
+    "collections": "27",
+    "collectors": "26",
+    "keepers": "7"
+}
+
+var totCount = json_artHistorians["tot"]
+var menCount = json_artHistorians["male"]
+var womenCount = json_artHistorians["female"]
+var nonBinaryCount = json_artHistorians["non-binary"]
+
+$(window).on('load', function () {
+      $('.count-tot').text(totCount)
+      $('.count-men').text(menCount)
+      $('.count-women').text(womenCount)
+      $('.count-non-binary').text(nonBinaryCount)
+ });
+ 
+var totCollections = json_artchives_classes["collections"]
+var totCollectors = json_artchives_classes["collectors"]
+var totKeepers  = json_artchives_classes["keepers"]
+ 
+ $(window).on('load', function () {
+      $('.count-collections').text(totCollections)
+      $('.count-collectors').text(totCollectors)
+      $('.count-keepers').text(totKeepers)
+ });
+ 
+ 
+// ----------- COUNTER ANIMATION-----------------
+
+$(window).on('scroll.scroll2',function() {
+    if (checkVisible($('.count-section1'))) { 
+      $('.count-tot').text(totCount)
+      $('.count-men').text(menCount)
+      $('.count-women').text(womenCount)
+      $('.count-non-binary').text(nonBinaryCount)
+	$(".count").each(function () {
+  $(this)
+    .prop("Counter", 0)
+    .animate(
+      {
+        Counter: $(this).text()
+      },
+      {
+        duration: 1600,
+        easing: "swing",
+        step: function (now) {
+          $(this).text(Math.ceil(now));
+        }
+      }
+    );
+});
+        $(window).off('scroll.scroll2');
+    } else {
+         // do nothing
+    }
+});
+
+
+
+
+$(window).on('scroll.scroll7',function() {
+    if (checkVisible($('.count-section2'))) { 
+      $('.count-tot').text(totCount)
+      $('.count-men').text(menCount)
+      $('.count-women').text(womenCount)
+      $('.count-non-binary').text(nonBinaryCount)
+		$('.count-section-text').delay(1000).fadeIn(2000);
+		$(".count2").each(function () {
+  $(this)
+    .prop("Counter", 0)
+    .animate(
+      {
+        Counter: $(this).text()
+      },
+      {
+        duration: 3000,
+        easing: "swing",
+        step: function (now) {
+          $(this).text(Math.ceil(now));
+        }
+      }
+    );
+});
+        $(window).off('scroll.scroll7');
+    } else {
+         // do nothing
+    }
+});
+
+$(window).on('scroll.scroll39',function() {
+    if (checkVisible($('.count-section3'))) { 
+		$('.count-section-text3').delay(1000).fadeTo(2000,1);
+		$('.statement-bold').delay(2500).fadeTo(2000,1);
+	  $('.count-collections').text(totCollections)
+      $('.count-collectors').text(totCollectors)
+      $('.count-keepers').text(totKeepers)
+		$(".count3").each(function () {
+  $(this)
+    .prop("Counter", 0)
+    .animate(
+      {
+        Counter: $(this).text()
+      },
+      {
+        duration: 3000,
+        easing: "swing",
+        step: function (now) {
+          $(this).text(Math.ceil(now));
+        }
+      }
+    );
+});
+        $(window).off('scroll.scroll39');
+    } else {
+         // do nothing
+    }
+});
+ 
+
+//---------- map chart---------
+
+
 $.ajaxSetup({
     async: false
 });
@@ -5,7 +164,7 @@ var json_data;
 $.getJSON("source/data.json", function(json){
     json_data = json;
 });
-var map_data = json_data
+var map_data = json_data;
 
 
 // Themes begin

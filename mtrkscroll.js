@@ -1,4 +1,6 @@
-+// ----------- PAGE TRANSISITION -------------
+
+
+// ----------- PAGE TRANSISITION -------------
 
 window.scroll(0, 0)
 
@@ -33,7 +35,7 @@ window.transitionToPage = function(href) {
 
 $(document).ready(function() { 
    $('#word1, #word2, #word3, #word4').each(function(fadeInDiv) {
-     $(this).delay(fadeInDiv * 3500).fadeIn(2200);
+     $(this).delay(fadeInDiv * 2000).fadeIn(2200);
    });
 });
 
@@ -68,85 +70,7 @@ $(window).on('scroll.scroll1',function() {
 
 
 
-// ----------- COUNTER -----------------
 
-$(window).on('scroll.scroll2',function() {
-    if (checkVisible($('.count-section1'))) { 
-	$(".count").each(function () {
-  $(this)
-    .prop("Counter", 0)
-    .animate(
-      {
-        Counter: $(this).text()
-      },
-      {
-        duration: 1600,
-        easing: "swing",
-        step: function (now) {
-          $(this).text(Math.ceil(now));
-        }
-      }
-    );
-});
-        $(window).off('scroll.scroll2');
-    } else {
-         // do nothing
-    }
-});
-
-
-
-
-$(window).on('scroll.scroll7',function() {
-    if (checkVisible($('.count-section2'))) { 
-		$('.count-section-text').delay(1000).fadeIn(2000);
-		$(".count2").each(function () {
-  $(this)
-    .prop("Counter", 0)
-    .animate(
-      {
-        Counter: $(this).text()
-      },
-      {
-        duration: 3000,
-        easing: "swing",
-        step: function (now) {
-          $(this).text(Math.ceil(now));
-        }
-      }
-    );
-});
-        $(window).off('scroll.scroll7');
-    } else {
-         // do nothing
-    }
-});
-
-$(window).on('scroll.scroll39',function() {
-    if (checkVisible($('.count-section3'))) { 
-		$('.count-section-text3').delay(1000).fadeTo(2000,1);
-		$('.statement-bold').delay(4000).fadeTo(2000,1);
-		$(".count3").each(function () {
-  $(this)
-    .prop("Counter", 0)
-    .animate(
-      {
-        Counter: $(this).text()
-      },
-      {
-        duration: 3000,
-        easing: "swing",
-        step: function (now) {
-          $(this).text(Math.ceil(now));
-        }
-      }
-    );
-});
-        $(window).off('scroll.scroll39');
-    } else {
-         // do nothing
-    }
-});
 
 // ----------- FADE IN MATRIOSKA -------------
 
@@ -178,7 +102,7 @@ $(window).on('scroll.scroll5',function() {
 
 $(window).on('scroll.scroll6',function() {
     if (checkVisible($('.double-text-section1'))) { 
-		$('.text-section-below').delay(2000).fadeIn(2000);
+		$('.text-section-below').delay(1000).fadeIn(2000);
 		$('.text-section-below').addClass( "entrance-down" );
         $(window).off('scroll.scroll6');
     } else {
@@ -237,7 +161,6 @@ $(window).on('scroll.scroll22',function() {
     if (checkVisible($('.late-text-section'))) { 
 		$('.estonia-text, .slovenia-text').each(function(fadeInDiv) {
      $(this).delay(fadeInDiv * 1000).fadeTo(3000, 1);
-	$(this).delay(fadeInDiv * 1000).addClass( "entrance-down" );
    });
         $(window).off('scroll.scroll22');
     } else {
@@ -391,11 +314,11 @@ $(window).on('scroll.scroll26',function() {
 $(window).on('scroll.scroll20',function() {
     if (checkVisible($('.after-circles-flag'))) { 
 		$('.circle-full-image').delay(6000).fadeOut(3000);
-		$('.circle-full-plus').delay(9000).fadeOut(3000);
+		$('.circle-full-plus').delay(7000).fadeOut(3000);
 		setTimeout(function(){
 		$('.empty-circle-one').addClass( "move-to-right" );
 		$('.empty-circle-two').addClass( "move-to-left" );      
-   }, 10000);
+   }, 9000);
 		
         $(window).off('scroll.scroll20');
     } else {
@@ -407,10 +330,10 @@ $(window).on('scroll.scroll20',function() {
 
 $(window).on('scroll.scroll25',function() {
     if (checkVisible($('.after-circles-flag2'))) { 
-		$('.circle-full-image2').delay(8000).fadeOut(3000);		
+		$('.circle-full-image2').delay(6000).fadeOut(3000);		
 		setTimeout(function(){
      	$('.circle-full-image2').addClass( "move-up" ); 
-   }, 8000);
+   }, 6000);
 		setTimeout(function(){
 		$('.empty-circle-one2').fadeIn(3000);
 		$('.empty-circle-two2').fadeIn(3000);
@@ -448,7 +371,7 @@ $(window).on('scroll.scroll27',function() {
 $(window).on('scroll.scroll28',function() {
     if (checkVisible($('.final-text-section2'))) { 
     	$('.final-text-section2 p').fadeTo(3000,1);
-    	$('.final-text-section2 p').addClass( "entrance-down" );
+    
     	setTimeout(function(){
      	$('.myunderlined1').addClass( "test4" );
    }, 3000);
@@ -462,7 +385,7 @@ $(window).on('scroll.scroll28',function() {
 $(window).on('scroll.scroll29',function() {
     if (checkVisible($('.final-text-section3'))) { 
     	$('.final-text-section3-p').fadeTo(3000,1);
-    	$('.final-text-section3-p').addClass( "entrance-down" );
+    	
     	setTimeout(function(){
      	$('.myunderlined2').addClass( "test4" );
    }, 3000);
@@ -477,7 +400,6 @@ $(window).on('scroll.scroll29',function() {
 $(window).on('scroll.scroll33',function() {
     if (checkVisible($('.before-map-text-section'))) { 
     	$('.before-map-text-intro').fadeTo(3000,1);
-    	$('.before-map-text-intro').addClass( "entrance-down" );
         $(window).off('scroll.scroll33');
     } else {
          // do nothing
@@ -487,7 +409,7 @@ $(window).on('scroll.scroll33',function() {
 $(window).on('scroll.scroll30',function() {
     if (checkVisible($('.after-map-text-section'))) { 
     	$('.after-map-text-intro').fadeTo(3000,1);
-    	$('.after-map-text-intro').addClass( "entrance-down" );
+    	
         $(window).off('scroll.scroll30');
     } else {
          // do nothing
@@ -499,7 +421,7 @@ $(window).on('scroll.scroll30',function() {
 $(window).on('scroll.scroll32',function() {
     if (checkVisible($('.before-occupation-text-section'))) { 
     	$('.before-occupation-text-intro').fadeTo(3000,1);
-    	$('.before-occupation-text-intro').addClass( "entrance-down" );
+    	
         $(window).off('scroll.scroll32');
     } else {
          // do nothing
@@ -511,6 +433,115 @@ $(window).on('scroll.scroll31',function() {
     if (checkVisible($('.before-occupation-circle'))) { 
     	$('.myselectcountry').addClass( "test4" );
         $(window).off('scroll.scroll31');
+    } else {
+         // do nothing
+    }
+});
+
+// ----------------- ARTCHIVES ANIMATIONS -------------
+
+$(window).on('scroll.scroll40',function() {
+    if (checkVisible($('.artchives-paragraph1'))) { 
+    	$('.artchives-paragraph2').delay(1000).fadeTo(3000,1);
+    	$('.artchives-paragraph3').delay(2000).fadeTo(3000,1);
+      	setTimeout(function(){
+      	$('.zeri-image1').fadeTo(3000,1);
+      	$('.zeri-image1').addClass( "entrance-down" );
+    	$('.zeri-image3').delay(1000).fadeTo(3000,1);
+    	$('.zeri-image5').delay(2000).fadeTo(3000,1);
+   },3000);
+        setTimeout(function(){
+      	$('.zeri-image3').addClass( "entrance-down" );
+   },4000);
+           setTimeout(function(){
+      	$('.zeri-image5').addClass( "entrance-down" );
+   },5000);
+              setTimeout(function(){
+      	$('.zeri-image2').fadeTo(3000,1);
+      	$('.zeri-image4').fadeTo(3000,1);
+   },6000);
+        $(window).off('scroll.scroll40');
+    } else {
+         // do nothing
+    }
+});
+
+// ----------------- SECOND PICTOGRAMS CHART-------------
+
+$(window).on('scroll.scroll41',function() {
+    if (checkVisible($('.before-second-pictchart'))) { 
+    setTimeout(function(){
+      	$(".line4 img").each(function(i) {
+  		$(this).delay(i*70).fadeTo(300,1);
+		});
+   },1000);
+   	$('.after-second-pictchart').delay(2000).fadeTo(3000,1);
+   	$('.after-second-pictchart').addClass( "entrance-down" );	
+        $(window).off('scroll.scroll41');
+    } else {
+         // do nothing
+    }
+});
+
+$(window).on('scroll.scroll42',function() {
+    if (checkVisible($('.question1'))) { 
+   	$('.question2').delay(2000).fadeTo(3000,1);
+   	$('.question2').addClass( "entrance-down" );	
+        $(window).off('scroll.scroll42');
+    } else {
+         // do nothing
+    }
+});
+
+// ----------------- PORTRAIT GALLERY -------------
+
+$(window).on('scroll.scroll43',function() {
+    if (checkVisible($('.portrait-card-3'))) { 
+    $('.portrait-card-3').delay(700).fadeTo(3000,1);
+    $('.portrait-card-4').delay(700).fadeTo(3000,1);
+        $(window).off('scroll.scroll43');
+    } else {
+         // do nothing
+    }
+});
+
+$(window).on('scroll.scroll44',function() {
+    if (checkVisible($('.portrait-card-5'))) { 
+    $('.portrait-card-5').delay(700).fadeTo(3000,1);
+    $('.portrait-card-6').delay(700).fadeTo(3000,1);
+        $(window).off('scroll.scroll44');
+    } else {
+         // do nothing
+    }
+});
+
+$(window).on('scroll.scroll45',function() {
+    if (checkVisible($('.portrait-card-7'))) { 
+    $('.portrait-card-7').delay(700).fadeTo(3000,1);
+    $('.portrait-card-8').delay(700).fadeTo(3000,1);
+        $(window).off('scroll.scroll45');
+    } else {
+         // do nothing
+    }
+});
+
+$(window).on('scroll.scroll46',function() {
+    if (checkVisible($('.portrait-card-9'))) { 
+    $('.portrait-card-9').delay(700).fadeTo(3000,1);
+    $('.portrait-card-10').delay(700).fadeTo(3000,1);
+        $(window).off('scroll.scroll46');
+    } else {
+         // do nothing
+    }
+});
+
+// ----------------- DOWNLOAD IMAGES -------------
+
+$(window).on('scroll.scroll47',function() {
+    if (checkVisible($('.download-section'))) { 
+    $('.download-1').delay(1000).fadeTo(3000,1);
+    $('.download-2').delay(1000).fadeTo(3000,1);
+        $(window).off('scroll.scroll47');
     } else {
          // do nothing
     }

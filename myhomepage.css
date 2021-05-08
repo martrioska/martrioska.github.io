@@ -249,7 +249,7 @@ line-height: 1.6;
 
 .person-role {
 font-family: 'Maison Neue Book', serif;
-font-size: 0.6rem;
+font-size: 0.7rem;
 margin:0;
 margin-bottom: 3px;
 text-transform: uppercase;
@@ -262,7 +262,7 @@ margin:0;
 text-transform: uppercase;
 text-decoration: none;
 color:black;
-margin-top:5px;
+margin-top:7px;
 display:inline-block; 
 padding-bottom:3px;
 border-bottom:1px solid black;
@@ -572,7 +572,7 @@ text-decoration: none;
 	font-size: 0.8rem;
 	line-height: 1rem;
 	letter-spacing: 0.07rem;
-	border-bottom:1px solid #242C41;
+	border-bottom:0px solid #242C41;
 	}  
 	
 	.about-content {
