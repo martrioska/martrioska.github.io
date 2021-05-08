@@ -1,157 +1,548 @@
-[{
-        "name": "Germany",
-        "id": "DE",
-        "male": "1838",
-        "female": "448"
-    },
-    {
-        "name": "France",
-        "id": "FR",
-        "male": "714",
-        "female": "187"
-    },
-    {
-        "name": "United Kingdom",
-        "id": "GB",
-        "male": "356",
-        "female": "102"
-    },
-    {
-        "name": "Austria",
-        "id": "AT",
-        "male": "310",
-        "female": "91"
-    },
-    {
-        "name": "Italy",
-        "id": "IT",
-        "male": "298",
-        "female": "111"
-    },
-    {
-        "name": "Poland",
-        "id": "PL",
-        "male": "247",
-        "female": "118"
-    },
-    {
-        "name": "Spain",
-        "id": "ES",
-        "male": "233",
-        "female": "140"
-    },
-    {
-        "name": "Netherlands",
-        "id": "NL",
-        "male": "183",
-        "female": "72"
-    },
-    {
-        "name": "Hungary",
-        "id": "HU",
-        "male": "152",
-        "female": "55"
-    },
-    {
-        "name": "Sweden",
-        "id": "SE",
-        "male": "140",
-        "female": "52"
-    },
-    {
-        "name": "Belgium",
-        "id": "BE",
-        "male": "113",
-        "female": "23"
-    },
-    {
-        "name": "Denmark",
-        "id": "DK",
-        "male": "101",
-        "female": "52"
-    },
-    {
-        "name": "Slovenia",
-        "id": "SI",
-        "male": "99",
-        "female": "135"
-    },
-    {
-        "name": "Czech Republic",
-        "id": "CZ",
-        "male": "61",
-        "female": "50"
-    },
-    {
-        "name": "Greece",
-        "id": "GR",
-        "male": "44",
-        "female": "12"
-    },
-    {
-        "name": "Romania",
-        "id": "RO",
-        "male": "44",
-        "female": "10"
-    },
-    {
-        "name": "Finland",
-        "id": "FI",
-        "male": "43",
-        "female": "28"
-    },
-    {
-        "name": "Estonia",
-        "id": "EE",
-        "male": "36",
-        "female": "38"
-    },
-    {
-        "name": "Bulgaria",
-        "id": "BG",
-        "male": "25",
-        "female": "11"
-    },
-    {
-        "name": "Croatia",
-        "id": "HR",
-        "male": "18",
-        "female": "7"
-    },
-    {
-        "name": "Lithuania",
-        "id": "LT",
-        "male": "16",
-        "female": "12"
-    },
-    {
-        "name": "Latvia",
-        "id": "LV",
-        "male": "15",
-        "female": "5"
-    },
-    {
-        "name": "Portugal",
-        "id": "PT",
-        "male": "13",
-        "female": "5"
-    },
-    {
-        "name": "Ireland",
-        "id": "IE",
-        "male": "7",
-        "female": "3"
-    },
-    {
-        "name": "Slovakia",
-        "id": "SK",
-        "male": "5",
-        "female": "4"
-    },
-    {
-        "name": "Luxembourg",
-        "id": "LU",
-        "male": "4",
-        "female": "3"
-    }
-]
+{
+    "geo_data": [
+        {
+            "name": "Germany",
+            "id": "DE",
+            "male": "1879",
+            "female": "465"
+        },
+        {
+            "name": "France",
+            "id": "FR",
+            "male": "767",
+            "female": "199"
+        },
+        {
+            "name": "United Kingdom",
+            "id": "GB",
+            "male": "384",
+            "female": "108"
+        },
+        {
+            "name": "Austria",
+            "id": "AT",
+            "male": "339",
+            "female": "100"
+        },
+        {
+            "name": "Italy",
+            "id": "IT",
+            "male": "332",
+            "female": "130"
+        },
+        {
+            "name": "Poland",
+            "id": "PL",
+            "male": "257",
+            "female": "121"
+        },
+        {
+            "name": "Spain",
+            "id": "ES",
+            "male": "239",
+            "female": "146"
+        },
+        {
+            "name": "Netherlands",
+            "id": "NL",
+            "male": "192",
+            "female": "73"
+        },
+        {
+            "name": "Hungary",
+            "id": "HU",
+            "male": "155",
+            "female": "56"
+        },
+        {
+            "name": "Sweden",
+            "id": "SE",
+            "male": "146",
+            "female": "54"
+        },
+        {
+            "name": "Czech Republic",
+            "id": "CZ",
+            "male": "126",
+            "female": "71"
+        },
+        {
+            "name": "Belgium",
+            "id": "BE",
+            "male": "120",
+            "female": "23"
+        },
+        {
+            "name": "Denmark",
+            "id": "DK",
+            "male": "103",
+            "female": "52"
+        },
+        {
+            "name": "Slovenia",
+            "id": "SI",
+            "male": "102",
+            "female": "136"
+        },
+        {
+            "name": "Greece",
+            "id": "GR",
+            "male": "44",
+            "female": "13"
+        },
+        {
+            "name": "Romania",
+            "id": "RO",
+            "male": "44",
+            "female": "10"
+        },
+        {
+            "name": "Finland",
+            "id": "FI",
+            "male": "43",
+            "female": "28"
+        },
+        {
+            "name": "Estonia",
+            "id": "EE",
+            "male": "37",
+            "female": "41"
+        },
+        {
+            "name": "Bulgaria",
+            "id": "BG",
+            "male": "25",
+            "female": "12"
+        },
+        {
+            "name": "Croatia",
+            "id": "HR",
+            "male": "19",
+            "female": "7"
+        },
+        {
+            "name": "Lithuania",
+            "id": "LT",
+            "male": "17",
+            "female": "13"
+        },
+        {
+            "name": "Latvia",
+            "id": "LV",
+            "male": "15",
+            "female": "5"
+        },
+        {
+            "name": "Portugal",
+            "id": "PT",
+            "male": "13",
+            "female": "7"
+        },
+        {
+            "name": "Slovakia",
+            "id": "SK",
+            "male": "9",
+            "female": "8"
+        },
+        {
+            "name": "Ireland",
+            "id": "IE",
+            "male": "7",
+            "female": "3"
+        },
+        {
+            "name": "Luxembourg",
+            "id": "LU",
+            "male": "5",
+            "female": "3"
+        }
+    ],
+    "inst_data": [
+        {
+            "institution": "German Archaeological Institute",
+            "male": "427",
+            "female": "48",
+            "country": "Germany"
+        },
+        {
+            "institution": "Acad\u00e9mie des Inscriptions et Belles-Lettres",
+            "male": "93",
+            "female": "4",
+            "country": "France"
+        },
+        {
+            "institution": "Royal Swedish Academy of Letters, History and Antiquities",
+            "male": "88",
+            "female": "12",
+            "country": "Sweden"
+        },
+        {
+            "institution": "Austrian Archaeological Institute",
+            "male": "66",
+            "female": "4",
+            "country": "Austria"
+        },
+        {
+            "institution": "Real Academia de Bellas Artes de San Fernando",
+            "male": "53",
+            "female": "3",
+            "country": "Spain"
+        },
+        {
+            "institution": "British Academy",
+            "male": "51",
+            "female": "8",
+            "country": "United Kingdom"
+        },
+        {
+            "institution": "Royal Netherlands Academy of Arts and Sciences",
+            "male": "48",
+            "female": "4",
+            "country": "Netherlands"
+        },
+        {
+            "institution": "Lincean Academy",
+            "male": "54",
+            "female": "4",
+            "country": "Italy"
+        },
+        {
+            "institution": "Hungarian Academy of Sciences",
+            "male": "31",
+            "female": "1",
+            "country": "Hungary"
+        }
+    ],
+    "scholarly_normal": [
+        {
+            "range": "1820 - 1839",
+            "male": 4,
+            "female": 0
+        },
+        {
+            "range": "1840 - 1859",
+            "male": 8,
+            "female": 0
+        },
+        {
+            "range": "1860 - 1879",
+            "male": 106,
+            "female": 0
+        },
+        {
+            "range": "1880 - 1899",
+            "male": 45,
+            "female": 0
+        },
+        {
+            "range": "1900 - 1919",
+            "male": 436,
+            "female": 7
+        },
+        {
+            "range": "1920 - 1939",
+            "male": 629,
+            "female": 58
+        },
+        {
+            "range": "1940 - 1959",
+            "male": 712,
+            "female": 218
+        },
+        {
+            "range": "1960 - 1979",
+            "male": 846,
+            "female": 318
+        },
+        {
+            "range": "1980 - 1999",
+            "male": 878,
+            "female": 290
+        },
+        {
+            "range": "2000 - 2019",
+            "male": 1401,
+            "female": 533
+        },
+        {
+            "range": "2020 - 2039",
+            "male": 6,
+            "female": 6
+        }
+    ],
+    "scholarly_prop": [
+        {
+            "range": "1820 - 1839",
+            "male": "100.0",
+            "female": "0.0"
+        },
+        {
+            "range": "1840 - 1859",
+            "male": "100.0",
+            "female": "0.0"
+        },
+        {
+            "range": "1860 - 1879",
+            "male": "100.0",
+            "female": "0.0"
+        },
+        {
+            "range": "1880 - 1899",
+            "male": "100.0",
+            "female": "0.0"
+        },
+        {
+            "range": "1900 - 1919",
+            "male": "98.42",
+            "female": "1.58"
+        },
+        {
+            "range": "1920 - 1939",
+            "male": "91.56",
+            "female": "8.44"
+        },
+        {
+            "range": "1940 - 1959",
+            "male": "76.56",
+            "female": "23.44"
+        },
+        {
+            "range": "1960 - 1979",
+            "male": "72.68",
+            "female": "27.32"
+        },
+        {
+            "range": "1980 - 1999",
+            "male": "75.17",
+            "female": "24.83"
+        },
+        {
+            "range": "2000 - 2019",
+            "male": "72.44",
+            "female": "27.56"
+        },
+        {
+            "range": "2020 - 2039",
+            "male": "50.0",
+            "female": "50.0"
+        }
+    ],
+    "active_normal": [
+        {
+            "range": "1820 - 1839",
+            "male": 212,
+            "female": 6
+        },
+        {
+            "range": "1840 - 1859",
+            "male": 353,
+            "female": 7
+        },
+        {
+            "range": "1860 - 1879",
+            "male": 560,
+            "female": 14
+        },
+        {
+            "range": "1880 - 1899",
+            "male": 882,
+            "female": 44
+        },
+        {
+            "range": "1900 - 1919",
+            "male": 1317,
+            "female": 124
+        },
+        {
+            "range": "1920 - 1939",
+            "male": 1705,
+            "female": 363
+        },
+        {
+            "range": "1940 - 1959",
+            "male": 1941,
+            "female": 647
+        },
+        {
+            "range": "1960 - 1979",
+            "male": 1806,
+            "female": 795
+        },
+        {
+            "range": "1980 - 1999",
+            "male": 1345,
+            "female": 725
+        },
+        {
+            "range": "2000 - 2019",
+            "male": 746,
+            "female": 489
+        },
+        {
+            "range": "2020 - 2039",
+            "male": 77,
+            "female": 77
+        }
+    ],
+    "active_prop": [
+        {
+            "range": "1820 - 1839",
+            "male": "97.25",
+            "female": "2.75"
+        },
+        {
+            "range": "1840 - 1859",
+            "male": "98.06",
+            "female": "1.94"
+        },
+        {
+            "range": "1860 - 1879",
+            "male": "97.56",
+            "female": "2.44"
+        },
+        {
+            "range": "1880 - 1899",
+            "male": "95.25",
+            "female": "4.75"
+        },
+        {
+            "range": "1900 - 1919",
+            "male": "91.39",
+            "female": "8.61"
+        },
+        {
+            "range": "1920 - 1939",
+            "male": "82.45",
+            "female": "17.55"
+        },
+        {
+            "range": "1940 - 1959",
+            "male": "75.0",
+            "female": "25.0"
+        },
+        {
+            "range": "1960 - 1979",
+            "male": "69.43",
+            "female": "30.57"
+        },
+        {
+            "range": "1980 - 1999",
+            "male": "64.98",
+            "female": "35.02"
+        },
+        {
+            "range": "2000 - 2019",
+            "male": "60.4",
+            "female": "39.6"
+        },
+        {
+            "range": "2020 - 2039",
+            "male": "50.0",
+            "female": "50.0"
+        }
+    ],
+    "occ_data_female": [
+        {
+            "gender": "female",
+            "occupation": "university teacher",
+            "number": 245
+        },
+        {
+            "gender": "female",
+            "occupation": "writer",
+            "number": 188
+        },
+        {
+            "gender": "female",
+            "occupation": "exhibition curator",
+            "number": 127
+        },
+        {
+            "gender": "female",
+            "occupation": "curator",
+            "number": 115
+        },
+        {
+            "gender": "female",
+            "occupation": "archaeologist",
+            "number": 100
+        },
+        {
+            "gender": "female",
+            "occupation": "historian",
+            "number": 92
+        },
+        {
+            "gender": "female",
+            "occupation": "art critic",
+            "number": 73
+        },
+        {
+            "gender": "female",
+            "occupation": "architectural historian",
+            "number": 54
+        },
+        {
+            "gender": "female",
+            "occupation": "translator",
+            "number": 44
+        },
+        {
+            "gender": "female",
+            "occupation": "journalist",
+            "number": 41
+        }
+    ],
+    "occ_data_male": [
+        {
+            "gender": "male",
+            "occupation": "university teacher",
+            "number": 1355
+        },
+        {
+            "gender": "male",
+            "occupation": "archaeologist",
+            "number": 757
+        },
+        {
+            "gender": "male",
+            "occupation": "writer",
+            "number": 652
+        },
+        {
+            "gender": "male",
+            "occupation": "architectural historian",
+            "number": 462
+        },
+        {
+            "gender": "male",
+            "occupation": "historian",
+            "number": 399
+        },
+        {
+            "gender": "male",
+            "occupation": "architect",
+            "number": 347
+        },
+        {
+            "gender": "male",
+            "occupation": "painter",
+            "number": 281
+        },
+        {
+            "gender": "male",
+            "occupation": "art critic",
+            "number": 278
+        },
+        {
+            "gender": "male",
+            "occupation": "curator",
+            "number": 256
+        },
+        {
+            "gender": "male",
+            "occupation": "exhibition curator",
+            "number": 208
+        }
+    ]
+}
