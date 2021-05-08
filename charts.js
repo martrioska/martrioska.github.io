@@ -1,15 +1,15 @@
+$.ajaxSetup({
+    async: false
+});
+var json_data;
+$.getJSON("source/data.json", function(json){
+    json_data = json;
+});
 //---------- 100 PICTOGRAMS CHARTS---------
 
-json_percList = {
-    "female": 31,
-    "male": 69,
-    "non-binary": 0
-}
+json_percList = json_data["historians_prop"];
 
-json_artchives_tot = {
-    "female": 1,
-    "male": 25
-}
+json_artchives_tot = json_data["artchives_genders"];
 
 
 $( document ).ready(function() {
@@ -26,18 +26,9 @@ $( document ).ready(function() {
 
 //---------- COUNTER FILL --------
 
-json_artHistorians = {
-    "tot": "15303",
-    "male": "10514",
-    "female": "4787",
-    "non-binary": "2"
-}
+json_artHistorians = json_data["artchives_genders"];
 
-json_artchives_classes = {
-    "collections": "27",
-    "collectors": "26",
-    "keepers": "7"
-}
+json_artchives_classes = json_data["artchives_stats"];
 
 var totCount = json_artHistorians["tot"]
 var menCount = json_artHistorians["male"]
@@ -156,14 +147,6 @@ $(window).on('scroll.scroll39',function() {
 
 //---------- map chart---------
 
-
-$.ajaxSetup({
-    async: false
-});
-var json_data;
-$.getJSON("source/data.json", function(json){
-    json_data = json;
-});
 var map_data = json_data['geo_data'];
 
 
