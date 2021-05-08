@@ -1,0 +1,157 @@
+[{
+        "name": "Germany",
+        "id": "DE",
+        "male": "1838",
+        "female": "448"
+    },
+    {
+        "name": "France",
+        "id": "FR",
+        "male": "714",
+        "female": "187"
+    },
+    {
+        "name": "United Kingdom",
+        "id": "GB",
+        "male": "356",
+        "female": "102"
+    },
+    {
+        "name": "Austria",
+        "id": "AT",
+        "male": "310",
+        "female": "91"
+    },
+    {
+        "name": "Italy",
+        "id": "IT",
+        "male": "298",
+        "female": "111"
+    },
+    {
+        "name": "Poland",
+        "id": "PL",
+        "male": "247",
+        "female": "118"
+    },
+    {
+        "name": "Spain",
+        "id": "ES",
+        "male": "233",
+        "female": "140"
+    },
+    {
+        "name": "Netherlands",
+        "id": "NL",
+        "male": "183",
+        "female": "72"
+    },
+    {
+        "name": "Hungary",
+        "id": "HU",
+        "male": "152",
+        "female": "55"
+    },
+    {
+        "name": "Sweden",
+        "id": "SE",
+        "male": "140",
+        "female": "52"
+    },
+    {
+        "name": "Belgium",
+        "id": "BE",
+        "male": "113",
+        "female": "23"
+    },
+    {
+        "name": "Denmark",
+        "id": "DK",
+        "male": "101",
+        "female": "52"
+    },
+    {
+        "name": "Slovenia",
+        "id": "SI",
+        "male": "99",
+        "female": "135"
+    },
+    {
+        "name": "Czech Republic",
+        "id": "CZ",
+        "male": "61",
+        "female": "50"
+    },
+    {
+        "name": "Greece",
+        "id": "GR",
+        "male": "44",
+        "female": "12"
+    },
+    {
+        "name": "Romania",
+        "id": "RO",
+        "male": "44",
+        "female": "10"
+    },
+    {
+        "name": "Finland",
+        "id": "FI",
+        "male": "43",
+        "female": "28"
+    },
+    {
+        "name": "Estonia",
+        "id": "EE",
+        "male": "36",
+        "female": "38"
+    },
+    {
+        "name": "Bulgaria",
+        "id": "BG",
+        "male": "25",
+        "female": "11"
+    },
+    {
+        "name": "Croatia",
+        "id": "HR",
+        "male": "18",
+        "female": "7"
+    },
+    {
+        "name": "Lithuania",
+        "id": "LT",
+        "male": "16",
+        "female": "12"
+    },
+    {
+        "name": "Latvia",
+        "id": "LV",
+        "male": "15",
+        "female": "5"
+    },
+    {
+        "name": "Portugal",
+        "id": "PT",
+        "male": "13",
+        "female": "5"
+    },
+    {
+        "name": "Ireland",
+        "id": "IE",
+        "male": "7",
+        "female": "3"
+    },
+    {
+        "name": "Slovakia",
+        "id": "SK",
+        "male": "5",
+        "female": "4"
+    },
+    {
+        "name": "Luxembourg",
+        "id": "LU",
+        "male": "4",
+        "female": "3"
+    }
+]
