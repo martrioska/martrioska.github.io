@@ -1,0 +1,100 @@
+@base <http://www.wikidata.org/entity/>.
+@prefix wdt: <http://www.wikidata.org/prop/direct/>.
+@prefix wd: <http://www.wikidata.org/entity/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+
+<Q103498>
+	rdfs:label 'Henriette Hertz' ; #name
+	wdt:P21 wd:Q6581072 ; #gender
+	wdt:P27 wd:Q43287 ; #country
+	wdt:P106 wd:Q10732476, wd:Q15472169 ; #occupation
+	wdt:P463 wd:Q339759 . #member of
+
+
+<Q18342317>
+	rdfs:label 'Elizabeth McGrath' ; #name
+	wdt:P21 wd:Q6581072 ; #gender
+	wdt:P27 wd:Q145 ; #country
+	wdt:P106 wd:Q1792450, wd:Q674426 ; #occupation
+	wdt:P463 wd:Q1301699, wd:Q683095, wd:Q723551 . #member of
+
+<Q106677003> wdt:P50 <Q18342317> .
+<Q106677033> wdt:P50 <Q18342317> .
+
+
+<Q19997511>
+	rdfs:label 'Evelyn Sandberg Vavalà' ; #name
+	wdt:P21 wd:Q6581072; #gender
+	wdt:P27 wd:Q145 ; #country
+	wdt:P106 wd:Q1792450 ; #occupation
+	wdt:P463 wd:Q1435690 . #member of
+
+<Q106677157> wdt:P50 <Q19997511> .
+<Q106677121> wdt:P50 <Q19997511> .
+
+
+<Q21176228>
+	rdfs:label 'Annette Michelson' ; #name
+	wdt:P21 wd:Q6581072; #gender
+	wdt:P27 wd:Q30 ; #country
+	wdt:P106 wd:Q1622272, wd:Q1792450, wd:Q1930187, wd:Q333634, wd:Q36180, wd:Q4164507, wd:Q4220892 ; #occupation
+	wdt:P463 wd:Q29247, wd:Q49210, wd:Q572548 . #member of
+
+<Q106677174> wdt:P50 <Q21176228> .
+
+
+<Q21264725>
+	rdfs:label 'Steffi Roettgen' ; #name
+	wdt:P21 wd:Q6581072; #gender
+	wdt:P27 wd:Q183 ; #country
+	wdt:P106 wd:Q1622272, wd:Q1792450 ; #occupation
+	wdt:P463 wd:Q55044, wd:Q872398 . #member of
+
+
+<Q236958>
+	rdfs:label 'Katherine Anne Porter' ; #name
+	wdt:P21 wd:Q6581072; #gender
+	wdt:P27 wd:Q30 ; #country
+	wdt:P106 wd:Q11774202, wd:Q1930187, wd:Q28389, wd:Q36180, wd:Q6625963 ; #occupation
+	wdt:P463 wd:Q463281 . #member of
+
+
+<Q449499>
+	rdfs:label 'Svetlana Alpers' ; #name
+	wdt:P21 wd:Q6581072; #gender
+	wdt:P27 wd:Q30 ; #country
+	wdt:P106 wd:Q1622272, wd:Q1792450 ; #occupation
+	wdt:P463 wd:Q463303, wd:Q478050, wd:Q635642 . #member of
+
+<Q106677106> wdt:P50 <Q449499> .
+<Q106677046> wdt:P50 <Q449499> .
+
+
+<Q61481008>
+	rdfs:label 'Anna Ottani Cavina' ; #name
+	wdt:P21 wd:Q6581072; #gender
+	wdt:P27 wd:Q38 ; #country
+	wdt:P106 wd:Q1622272, wd:Q1792450, wd:Q26950764, wd:Q36180 ; #occupation
+	wdt:P463 wd:Q1674868, wd:Q23687322, wd:Q3747203 . #member of
+
+<Q106677139> wdt:P50 <Q61481008> .
+<Q106677128> wdt:P50 <Q61481008> .
+
+
+<Q61913691>
+	rdfs:label 'Luisa Vertova' ; #name
+	wdt:P21 wd:Q6581072; #gender
+	wdt:P27 wd:Q38 ; #country
+	wdt:P106 wd:Q1607826, wd:Q1792450, wd:Q2986283 ; #occupation
+	wdt:P463 wd:Q1435690 . #member of
+
+<Q106677142> wdt:P50 <Q61913691> .
+
+
+<Q7882150>
+	rdfs:label 'Una Pope-Hennessy' ; #name
+	wdt:P21 wd:Q6581072; #gender
+	wdt:P27 wd:Q145 ; #country
+	wdt:P106 wd:Q1792450, wd:Q201788, wd:Q36180, wd:Q864380 ; #occupation
+	wdt:P463 wd:Q4970966 . #member of
