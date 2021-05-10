@@ -1,15 +1,15 @@
+$.ajaxSetup({
+    async: false
+});
+var json_data;
+$.getJSON("source/data.json", function(json){
+    json_data = json;
+});
 //---------- 100 PICTOGRAMS CHARTS---------
 
-json_percList = {
-    "female": 31,
-    "male": 69,
-    "non-binary": 0
-}
+json_percList = json_data["historians_prop"];
 
-json_artchives_tot = {
-    "female": 1,
-    "male": 25
-}
+json_artchives_tot = json_data["artchives_genders"];
 
 
 $( document ).ready(function() {
@@ -26,18 +26,9 @@ $( document ).ready(function() {
 
 //---------- COUNTER FILL --------
 
-json_artHistorians = {
-    "tot": "15303",
-    "male": "10514",
-    "female": "4787",
-    "non-binary": "2"
-}
+json_artHistorians = json_data["artchives_genders"];
 
-json_artchives_classes = {
-    "collections": "27",
-    "collectors": "26",
-    "keepers": "7"
-}
+json_artchives_classes = json_data["artchives_stats"];
 
 var totCount = json_artHistorians["tot"]
 var menCount = json_artHistorians["male"]
@@ -156,163 +147,8 @@ $(window).on('scroll.scroll39',function() {
 
 //---------- map chart---------
 
-map_data = [{
-        "name": "Germany",
-        "id": "DE",
-        "male": "1838",
-        "female": "448"
-    },
-    {
-        "name": "France",
-        "id": "FR",
-        "male": "714",
-        "female": "187"
-    },
-    {
-        "name": "United Kingdom",
-        "id": "GB",
-        "male": "356",
-        "female": "102"
-    },
-    {
-        "name": "Austria",
-        "id": "AT",
-        "male": "310",
-        "female": "91"
-    },
-    {
-        "name": "Italy",
-        "id": "IT",
-        "male": "298",
-        "female": "111"
-    },
-    {
-        "name": "Poland",
-        "id": "PL",
-        "male": "247",
-        "female": "118"
-    },
-    {
-        "name": "Spain",
-        "id": "ES",
-        "male": "233",
-        "female": "140"
-    },
-    {
-        "name": "Netherlands",
-        "id": "NL",
-        "male": "183",
-        "female": "72"
-    },
-    {
-        "name": "Hungary",
-        "id": "HU",
-        "male": "152",
-        "female": "55"
-    },
-    {
-        "name": "Sweden",
-        "id": "SE",
-        "male": "140",
-        "female": "52"
-    },
-    {
-        "name": "Belgium",
-        "id": "BE",
-        "male": "113",
-        "female": "23"
-    },
-    {
-        "name": "Denmark",
-        "id": "DK",
-        "male": "101",
-        "female": "52"
-    },
-    {
-        "name": "Slovenia",
-        "id": "SI",
-        "male": "99",
-        "female": "135"
-    },
-    {
-        "name": "Czech Republic",
-        "id": "CZ",
-        "male": "61",
-        "female": "50"
-    },
-    {
-        "name": "Greece",
-        "id": "GR",
-        "male": "44",
-        "female": "12"
-    },
-    {
-        "name": "Romania",
-        "id": "RO",
-        "male": "44",
-        "female": "10"
-    },
-    {
-        "name": "Finland",
-        "id": "FI",
-        "male": "43",
-        "female": "28"
-    },
-    {
-        "name": "Estonia",
-        "id": "EE",
-        "male": "36",
-        "female": "38"
-    },
-    {
-        "name": "Bulgaria",
-        "id": "BG",
-        "male": "25",
-        "female": "11"
-    },
-    {
-        "name": "Croatia",
-        "id": "HR",
-        "male": "18",
-        "female": "7"
-    },
-    {
-        "name": "Lithuania",
-        "id": "LT",
-        "male": "16",
-        "female": "12"
-    },
-    {
-        "name": "Latvia",
-        "id": "LV",
-        "male": "15",
-        "female": "5"
-    },
-    {
-        "name": "Portugal",
-        "id": "PT",
-        "male": "13",
-        "female": "5"
-    },
-    {
-        "name": "Ireland",
-        "id": "IE",
-        "male": "7",
-        "female": "3"
-    },
-    {
-        "name": "Slovakia",
-        "id": "SK",
-        "male": "5",
-        "female": "4"
-    },
-    {
-        "name": "Luxembourg",
-        "id": "LU",
-        "male": "4",
-        "female": "3"
-    }
-];
+var map_data = json_data['geo_data'];
+
 
 // Themes begin
 am4core.useTheme(am4themes_animated);
@@ -612,120 +448,9 @@ function showPieChart(polygon) {
 var sw_col1 = am4core.create("sw-col1", am4charts.XYChart);
 
 historian_data = {
-    'normal': [
-    {
-        "range": "1820 - 1839",
-        "male": 212,
-        "female": 6
-    },
-    {
-        "range": "1840 - 1859",
-        "male": 353,
-        "female": 7
-    },
-    {
-        "range": "1860 - 1879",
-        "male": 559,
-        "female": 14
-    },
-    {
-        "range": "1880 - 1899",
-        "male": 881,
-        "female": 44
-    },
-    {
-        "range": "1900 - 1919",
-        "male": 1315,
-        "female": 123
-    },
-    {
-        "range": "1920 - 1939",
-        "male": 1704,
-        "female": 361
-    },
-    {
-        "range": "1940 - 1959",
-        "male": 1936,
-        "female": 640
-    },
-    {
-        "range": "1960 - 1979",
-        "male": 1798,
-        "female": 787
-    },
-    {
-        "range": "1980 - 1999",
-        "male": 1342,
-        "female": 716
-    },
-    {
-        "range": "2000 - 2019",
-        "male": 745,
-        "female": 482
-    },
-    {
-        "range": "2020 - 2039",
-        "male": 77,
-        "female": 73
-    }
-],
-'proporional': [
-    {
-        "range": "1820 - 1839",
-        "male": "97.25",
-        "female": "2.75"
-    },
-    {
-        "range": "1840 - 1859",
-        "male": "98.06",
-        "female": "1.94"
-    },
-    {
-        "range": "1860 - 1879",
-        "male": "97.56",
-        "female": "2.44"
-    },
-    {
-        "range": "1880 - 1899",
-        "male": "95.24",
-        "female": "4.76"
-    },
-    {
-        "range": "1900 - 1919",
-        "male": "91.45",
-        "female": "8.55"
-    },
-    {
-        "range": "1920 - 1939",
-        "male": "82.52",
-        "female": "17.48"
-    },
-    {
-        "range": "1940 - 1959",
-        "male": "75.16",
-        "female": "24.84"
-    },
-    {
-        "range": "1960 - 1979",
-        "male": "69.56",
-        "female": "30.44"
-    },
-    {
-        "range": "1980 - 1999",
-        "male": "65.21",
-        "female": "34.79"
-    },
-    {
-        "range": "2000 - 2019",
-        "male": "60.72",
-        "female": "39.28"
-    },
-    {
-        "range": "2020 - 2039",
-        "male": "51.33",
-        "female": "48.67"
-    }
-]};
+    'normal': json_data['active_normal'],
+    'proporional': json_data['active_prop']
+};
 
 sw_col1.flag = 'normal'
 sw_col1.data = historian_data['normal']
@@ -784,120 +509,9 @@ sw_col1.legend = new am4charts.Legend();
 var sw_col2 = am4core.create("sw-col2", am4charts.XYChart);
 
 scholarly_data = {
-    'normal': [
-    {
-        "range": "1820 - 1839",
-        "male": 2,
-        "female": 0
-    },
-    {
-        "range": "1840 - 1859",
-        "male": 8,
-        "female": 0
-    },
-    {
-        "range": "1860 - 1879",
-        "male": 106,
-        "female": 0
-    },
-    {
-        "range": "1880 - 1899",
-        "male": 45,
-        "female": 0
-    },
-    {
-        "range": "1900 - 1919",
-        "male": 436,
-        "female": 7
-    },
-    {
-        "range": "1920 - 1939",
-        "male": 529,
-        "female": 54
-    },
-    {
-        "range": "1940 - 1959",
-        "male": 655,
-        "female": 194
-    },
-    {
-        "range": "1960 - 1979",
-        "male": 828,
-        "female": 248
-    },
-    {
-        "range": "1980 - 1999",
-        "male": 874,
-        "female": 272
-    },
-    {
-        "range": "2000 - 2019",
-        "male": 1334,
-        "female": 492
-    },
-    {
-        "range": "2020 - 2039",
-        "male": 6,
-        "female": 6
-    }
-],
-'proporional': [
-    {
-        "range": "1820 - 1839",
-        "male": "100.0",
-        "female": "0.0"
-    },
-    {
-        "range": "1840 - 1859",
-        "male": "100.0",
-        "female": "0.0"
-    },
-    {
-        "range": "1860 - 1879",
-        "male": "100.0",
-        "female": "0.0"
-    },
-    {
-        "range": "1880 - 1899",
-        "male": "100.0",
-        "female": "0.0"
-    },
-    {
-        "range": "1900 - 1919",
-        "male": "98.42",
-        "female": "1.58"
-    },
-    {
-        "range": "1920 - 1939",
-        "male": "90.74",
-        "female": "9.26"
-    },
-    {
-        "range": "1940 - 1959",
-        "male": "77.15",
-        "female": "22.85"
-    },
-    {
-        "range": "1960 - 1979",
-        "male": "76.95",
-        "female": "23.05"
-    },
-    {
-        "range": "1980 - 1999",
-        "male": "76.27",
-        "female": "23.73"
-    },
-    {
-        "range": "2000 - 2019",
-        "male": "73.06",
-        "female": "26.94"
-    },
-    {
-        "range": "2020 - 2039",
-        "male": "50.0",
-        "female": "50.0"
-    }
-]};
+    'normal': json_data['scholarly_normal'],
+    'proporional': json_data['scholarly_prop']
+};
 
 sw_col2.flag = 'normal'
 sw_col2.data = scholarly_data['normal']
@@ -987,83 +601,7 @@ function switch_sw_col1() {
 var female_occ_chart = am4core.create("alt-occ-female", am4charts.XYChart);
 
 // Add data
-female_occ_chart.data = [
-    {
-        "gender": "female",
-        "occupation": "University teacher",
-        "number": 243
-    },
-    {
-        "gender": "female",
-        "occupation": "Writer",
-        "number": 185
-    },
-    {
-        "gender": "female",
-        "occupation": "Exhibition curator",
-        "number": 127
-    },
-    {
-        "gender": "female",
-        "occupation": "Curator",
-        "number": 114
-    },
-    {
-        "gender": "female",
-        "occupation": "Archaeologist",
-        "number": 100
-    },
-    {
-        "gender": "female",
-        "occupation": "Historian",
-        "number": 92
-    },
-    {
-        "gender": "female",
-        "occupation": "Art critic",
-        "number": 73
-    },
-    {
-        "gender": "female",
-        "occupation": "Architectural historian",
-        "number": 53
-    },
-    {
-        "gender": "female",
-        "occupation": "Translator",
-        "number": 44
-    },
-    {
-        "gender": "female",
-        "occupation": "Journalist",
-        "number": 41
-    },
-    // {
-    //     "gender": "female",
-    //     "occupation": "teacher",
-    //     "number": 40
-    // },
-    // {
-    //     "gender": "female",
-    //     "occupation": "author",
-    //     "number": 38
-    // },
-    // {
-    //     "gender": "female",
-    //     "occupation": "librarian",
-    //     "number": 35
-    // },
-    // {
-    //     "gender": "female",
-    //     "occupation": "museum director",
-    //     "number": 35
-    // },
-    // {
-    //     "gender": "female",
-    //     "occupation": "architect",
-    //     "number": 30
-    // }
-];
+female_occ_chart.data = json_data['occ_data_female'];
 
 female_occ_chart.colors.list = [
     am4core.color("#e8cdda")
@@ -1091,83 +629,7 @@ female_occ_chart_series.columns.template.column.strokeOpacity = 0.2;
 var male_occ_chart = am4core.create("alt-occ-male", am4charts.XYChart);
 
 // Add data
-male_occ_chart.data = [
-    {
-        "gender": "male",
-        "occupation": "University teacher",
-        "number": 1356
-    },
-    {
-        "gender": "male",
-        "occupation": "Archaeologist",
-        "number": 759
-    },
-    {
-        "gender": "male",
-        "occupation": "Writer",
-        "number": 653
-    },
-    {
-        "gender": "male",
-        "occupation": "Architectural historian",
-        "number": 458
-    },
-    {
-        "gender": "male",
-        "occupation": "Historian",
-        "number": 398
-    },
-    {
-        "gender": "male",
-        "occupation": "Architect",
-        "number": 344
-    },
-    {
-        "gender": "male",
-        "occupation": "Painter",
-        "number": 280
-    },
-    {
-        "gender": "male",
-        "occupation": "Art critic",
-        "number": 280
-    },
-    {
-        "gender": "male",
-        "occupation": "Curator",
-        "number": 252
-    },
-    {
-        "gender": "male",
-        "occupation": "Exhibition curator",
-        "number": 207
-    },
-    // {
-    //     "gender": "male",
-    //     "occupation": "journalist",
-    //     "number": 195
-    // },
-    // {
-    //     "gender": "male",
-    //     "occupation": "anthropologist",
-    //     "number": 167
-    // },
-    // {
-    //     "gender": "male",
-    //     "occupation": "teacher",
-    //     "number": 154
-    // },
-    // {
-    //     "gender": "male",
-    //     "occupation": "author",
-    //     "number": 140
-    // },
-    // {
-    //     "gender": "male",
-    //     "occupation": "poet",
-    //     "number": 137
-    // }
-];
+male_occ_chart.data = json_data['occ_data_male'];
 
 male_occ_chart.colors.list = [
     am4core.color("#c4ddda")
@@ -1198,69 +660,14 @@ var nested_pie = am4core.create("nested-pie", am4charts.PieChart);
 nested_pie.innerRadius = am4core.percent(40);
 
 // Add data
-nested_pie.data = [
-    {
-        "institution": "German Archaeological Institute",
-        "male": "428",
-        "female": "49",
-        "country": "Germany"
-    },
-    {
-        "institution": "Acad\u00e9mie des Inscriptions et Belles-Lettres",
-        "male": "93",
-        "female": "4",
-        "country": "France"
-    },
-    {
-        "institution": "Royal Swedish Academy of Letters, History and Antiquities",
-        "male": "87",
-        "female": "12",
-        "country": "Sweden"
-    },
-    {
-        "institution": "Austrian Archaeological Institute",
-        "male": "66",
-        "female": "4",
-        "country": "Austria"
-    },
-    {
-        "institution": "Real Academia de Bellas Artes de San Fernando",
-        "male": "53",
-        "female": "3",
-        "country": "Spain"
-    },
-    {
-        "institution": "British Academy",
-        "male": "51",
-        "female": "7",
-        "country": "United Kingdom"
-    },
-    {
-        "institution": "Royal Netherlands Academy of Arts and Sciences",
-        "male": "48",
-        "female": "4",
-        "country": "Netherlands"
-    },
-    {
-        "institution": "Lincean Academy",
-        "male": "54",
-        "female": "3",
-        "country": "Italy"
-    },
-    {
-        "institution": "Hungarian Academy of Sciences",
-        "male": "31",
-        "female": "1",
-        "country": "Hungary"
-    }
-];
+nested_pie.data = json_data['inst_data'];
 
 // Add and configure Series
 var instPieSeries = nested_pie.series.push(new am4charts.PieSeries());
 
 instPieSeries.dataFields.value = "value";
 instPieSeries.dataFields.category = "category";
-instPieSeries.data = [{ value: 1838, category: "Male"}, { value: 448, category: "Female" }];
+instPieSeries.data = [{ value: get_country_nums()['male'], category: "Male"}, { value: get_country_nums()['female'], category: "Female" }];
 instPieSeries.colors.list = [
     am4core.color("#c4ddda"),
     am4core.color("#e8cdda")
@@ -1288,7 +695,7 @@ instPieSeries2.colors.list = [
 
 instPieSeries2.dataFields.value = "value";
 instPieSeries2.dataFields.category = "category";
-instPieSeries2.data = [{ value: 428, category: "Male" }, { value: 49, category: "Female" }];
+instPieSeries2.data = [{ value: get_inst_nums()['male'], category: "Male" }, { value: get_inst_nums()['female'], category: "Female" }];
 instPieSeries2.slices.template.stroke = am4core.color("#fff");
 instPieSeries2.slices.template.strokeWidth = 2;
 instPieSeries2.slices.template.strokeOpacity = 1;
@@ -1298,7 +705,7 @@ instPieSeries2.slices.template.tooltipText = "{category} Art Historians in the I
 instPieSeries2.labels.template.text = "{category} Art Historians in the Institution: {value}";
 
 var instLabel = nested_pie.chartContainer.createChild(am4core.Label);
-instLabel.text = "German\nArchaeological\nInstitute";
+instLabel.text = get_inst_nums()["institution"].replaceAll(" ", "\n");
 instLabel.fill = am4core.color("#333333");
 instLabel.fontSize = 20;
 
@@ -1317,17 +724,8 @@ function inst_countries() {
     for (var i = 0; i < instPieSeries.dataItems.length; i++) {
         var innerDataItem = instPieSeries.dataItems.getIndex(i);
         var outerDataItem = instPieSeries2.dataItems.getIndex(i);
-        var inst, loc;
-        for (var j = 0; j < nested_pie.data.length; j++) {
-            if(nested_pie.data[j]["country"] == country) {
-                inst = nested_pie.data[j]
-            }
-        }
-        for (var j = 0; j < map_data.length; j++) {
-            if(map_data[j]["name"] == country) {
-                loc = map_data[j]
-            }
-        }
+        var inst = get_inst_nums();
+        var loc = get_country_nums();
 
         instLabel.text = inst["institution"].replaceAll(" ", "\n")
         if (i == 0) {
@@ -1339,6 +737,28 @@ function inst_countries() {
             outerDataItem.value = inst["female"];
         }
     }
+}
+
+function get_country_nums() {
+    var country = document.getElementById("inst-countries").value;
+    var loc;
+    for (var j = 0; j < map_data.length; j++) {
+            if(map_data[j]["name"] == country) {
+                loc = map_data[j]
+            }
+        }
+    return loc;
+}
+
+function get_inst_nums() {
+    var country = document.getElementById("inst-countries").value;
+    var inst;
+    for (var j = 0; j < nested_pie.data.length; j++) {
+            if(nested_pie.data[j]["country"] == country) {
+                inst = nested_pie.data[j]
+            }
+        }
+    return inst;
 }
 
 
