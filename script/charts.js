@@ -23,6 +23,7 @@ $(window).on('load', function () {
 	var percentage_string = femaleNumber_string + "%"
       $('.percentage-number').text(percentage_string)
  });
+ 
 
 $( document ).ready(function() {
 	 var femaleNumber = json_artchives_tot["female"]
