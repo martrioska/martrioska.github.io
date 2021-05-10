@@ -70,8 +70,6 @@ $(window).on('scroll.scroll1',function() {
 
 
 
-
-
 // ----------- FADE IN MATRIOSKA -------------
 
 $(window).on('scroll.scroll4',function() {
@@ -255,7 +253,7 @@ $(window).on('scroll.scroll10',function() {
 		$('.flag-image1, .flag-image2, .flag-image3').each(function(fadeInDiv) {
      $(this).delay(fadeInDiv * 1000).fadeTo(4000, 1);
      $(this).delay(fadeInDiv * 1000).addClass( "entrance-down" );
-     
+    
    });
         $(window).off('scroll.scroll10');
     } else {

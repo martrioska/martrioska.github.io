@@ -5,11 +5,12 @@ var json_data;
 $.getJSON("source/data.json", function(json){
     json_data = json;
 });
+
 //---------- 100 PICTOGRAMS CHARTS---------
 
-json_percList = json_data["historians_prop"];
+var json_percList = json_data["historians_prop"];
 
-json_artchives_tot = json_data["artchives_genders"];
+var json_artchives_tot = json_data["artchives_genders"];
 
 
 $( document ).ready(function() {
@@ -17,6 +18,11 @@ $( document ).ready(function() {
      $('.line3').children().slice(femaleNumber*2).attr('src','svg/matrioska2.svg'); // green
 });
 
+$(window).on('load', function () {
+	var femaleNumber_string = json_percList["female"].toString()
+	var percentage_string = femaleNumber_string + "%"
+      $('.percentage-number').text(percentage_string)
+ });
 
 $( document ).ready(function() {
 	 var femaleNumber = json_artchives_tot["female"]
@@ -26,9 +32,9 @@ $( document ).ready(function() {
 
 //---------- COUNTER FILL --------
 
-json_artHistorians = json_data["artchives_genders"];
+var json_artHistorians = json_data["artchives_genders"];
 
-json_artchives_classes = json_data["artchives_stats"];
+var json_artchives_classes = json_data["artchives_stats"];
 
 var totCount = json_artHistorians["tot"]
 var menCount = json_artHistorians["male"]
