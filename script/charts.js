@@ -33,7 +33,7 @@ $( document ).ready(function() {
 
 //---------- COUNTER FILL --------
 
-var json_artHistorians = json_data["artchives_genders"];
+var json_artHistorians = json_data["historians"];
 
 var json_artchives_classes = json_data["artchives_stats"];
 
